@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 #define size 6
-void main()
+int main()
 {
     int i, min, findMin, temp;
 

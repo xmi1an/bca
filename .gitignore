@@ -1,0 +1,12 @@
+.idea
+.vscode
+CMakeLists.txt
+cmake-build-debug
+CMakeCache.txt
+CMakeLists.txt
+*.exe
+
+# Sem 3
+Basics
+build
+TestHere

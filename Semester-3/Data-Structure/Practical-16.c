@@ -128,8 +128,8 @@ int length()
     temp = head;
     while (temp != NULL)
     {
-        temp = temp->link;
         count++;
+        temp = temp->link;
     }
     return count;
 }

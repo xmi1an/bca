@@ -1,18 +1,18 @@
 ## 1. Write a c program for linear search which find an element in an unsorted list.
 
-2. Write a c program for binary search which find the location of a given element in a list.
+## 2. Write a c program for binary search which find the location of a given element in a list.
 
 ## 3. Write a c program for sorting using bubble sort method.
 
-4. Write a c program for sorting using quick sort. (Partition exchange sort) method.
+## 4. Write a c program for sorting using quick sort. (Partition exchange sort) method.
 
 ## 5. Write a c program for sorting using straight selection sort.
 
 ## 6. Write a c program for sorting using insertion sort.
 
-7. Write a c program for sorting using shell-sort method.
+## 7. Write a c program for sorting using shell-sort method.
 
-8. Write a c program for sorting using merge sort method.
+## 8. Write a c program for sorting using merge sort method.
 
 9. Write a c program for sorting using radix sort method.
 

@@ -1,63 +1,65 @@
-
-
+/* 8. Write a c program for sorting using merge sort method. */
 #include <stdio.h>
 
 /* Function to merge the subarrays of a[] */
-void merge(int a[], int beg, int mid, int end)
+void merge(int a[], int start, int mid, int end)
 {
-    int i, j, k;
-    int n1 = mid - beg + 1;
-    int n2 = end - mid;
+    int i = start;   /* initial index of first sub-array */
+    int j = mid + 1; /* initial index of second sub-array */
 
-    int LeftArray[n1], RightArray[n2]; // temporary arrays
+    int b[20];
+    int k = start;
 
-    /* copy data to temp arrays */
-    for (i = 0; i < n1; i++)
-        LeftArray[i] = a[beg + i];
-    for (j = 0; j < n2; j++)
-        RightArray[j] = a[mid + 1 + j];
-
-    i = 0;   /* initial index of first sub-array */
-    j = 0;   /* initial index of second sub-array */
-    k = beg; /* initial index of merged sub-array */
-
-    while (i < n1 && j < n2)
+    while (i <= mid && j <= end)
     {
-        if (LeftArray[i] <= RightArray[j])
+        if (a[i] <= a[j])
         {
-            a[k] = LeftArray[i];
+            b[k] = a[i];
             i++;
+            k++;
         }
         else
         {
-            a[k] = RightArray[j];
+            b[k] = a[j];
             j++;
+            k++;
         }
-        k++;
-    }
-    while (i < n1)
-    {
-        a[k] = LeftArray[i];
-        i++;
-        k++;
     }
 
-    while (j < n2)
+    if (i > mid)
     {
-        a[k] = RightArray[j];
-        j++;
-        k++;
+        while (j <= end)
+        {
+            b[k] = a[j];
+            j++;
+            k++;
+        }
+    }
+    else
+    {
+        while (i <= mid)
+        {
+            b[k] = a[i];
+            i++;
+            k++;
+        }
+    }
+
+    for (k = start; k <= end; k++)
+    {
+        a[k] = b[k];
     }
 }
 
-void mergeSort(int a[], int beg, int end)
+void divide(int a[], int start, int end)
 {
-    if (beg < end)
+    if (start < end)
     {
-        int mid = (beg + end) / 2;
-        mergeSort(a, beg, mid);
-        mergeSort(a, mid + 1, end);
-        merge(a, beg, mid, end);
+        int mid = (start + end) / 2;
+        divide(a, start, mid);
+
+        divide(a, mid + 1, end);
+        merge(a, start, mid, end);
     }
 }
 
@@ -72,14 +74,14 @@ void printArray(int a[], int n)
 
 int main()
 {
-    int a[8] = {12, 31, 25, 8, 32, 17, 40, 42};
+
+    int a[8] = {50, 10, 70, 60, 80, 40, 30, 20};
 
     int n = sizeof(a) / sizeof(a[0]);
 
     printf("Before sorting array elements are - \n");
     printArray(a, n);
-
-    mergeSort(a, 0, n - 1);
+    divide(a, 0, n - 1);
 
     printf("After sorting array elements are - \n");
     printArray(a, n);

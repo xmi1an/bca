@@ -13,6 +13,7 @@ void main()
 		printf("2. Pop. \n");
 		printf("3. Length \n");
 		printf("4. Display. \n");
+		printf("5. Peek. \n");
 
 		printf("Enter Your Choice : ");
 		scanf("%d", &choice);
@@ -33,6 +34,9 @@ void main()
 			break;
 		case 4:
 			display();
+			break;
+		case 5:
+			peek();
 			break;
 		case 0:
 			exit(1);
@@ -127,4 +131,14 @@ void display()
 			i++;
 		}
 	}
+}
+
+void peek()
+{
+	int i = 0;
+	if (isStackEmpty())
+		printf("Stack is Empty..\n");
+
+	else
+		printf("Top Item is : %d \n", my_stack[top]);
 }
