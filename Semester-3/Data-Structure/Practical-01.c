@@ -2,10 +2,10 @@
 
 #include <stdio.h>
 
+int searchItem(int *, int);
+
 int searchItem(int a[], int search)
 {
-    printf("\nElement to be searched = %d \n", search);
-
     int j = 0;
     for (j = 0; j < 5; j++)
     {

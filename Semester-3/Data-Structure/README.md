@@ -24,9 +24,9 @@
 
 ## 13. Write a c program for implementing a simple queue and its operation.
 
-14. Write a c program for implementing a double ended queue and its operation.
+## 14. Write a c program for implementing a double ended queue and its operation.
 
-15. Write a c program for implementing a circular queue and its operation.
+## 15. Write a c program for implementing a circular queue and its operation.
 
 ## 16. Write a c program for implementing a Singly linked list and its operation.
 

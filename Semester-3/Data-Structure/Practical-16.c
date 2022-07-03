@@ -105,7 +105,6 @@ void addAtAfter()
     }
     else
     {
-        // loc is less than nodes.
         while (i < loc)
         {
             travel = travel->link;

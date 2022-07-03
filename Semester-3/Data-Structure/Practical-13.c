@@ -5,8 +5,9 @@
 #define SIZE 5
 
 int myqueue[SIZE];
-int front, rear = 0;
-void enQueue();
+int front = -1, rear = -1;
+
+void enQueue(int);
 void deQueue();
 void display();
 
@@ -45,54 +46,45 @@ int main()
     return 0;
 }
 
-void enQueue(int data)
+void enQueue(int value)
 {
-    if (rear == SIZE)
-    {
-        printf("Queue is Full..\n");
-    }
+    if (rear == SIZE - 1)
+        printf("\nQueue is Full.. \n\n");
     else
     {
-        myqueue[rear] = data;
-        printf("Item Enqueued : %d \n", data);
+        if (front == -1)
+        {
+            front = 0;
+        }
         rear++;
+        myqueue[rear] = value;
+        printf("\nInserted : %d \n\n", value);
     }
 }
 
 void deQueue()
 {
-    int i;
-    if (front == rear)
-    {
-        printf("Queue is Empty..\n");
-    }
+    if (front == -1)
+        printf("\nQueue is Empty!!\n");
     else
     {
-        printf("Dequeued Item : %d \n\n", myqueue[front]);
-        for (i = 0; i < rear - 1; i++)
-        {
-            myqueue[i] = myqueue[i + 1];
-        }
-        rear--;
+        printf("\nItem Deleted : %d \n", myqueue[front]);
+        front++;
+        if (front > rear)
+            front = rear = -1;
     }
 }
 
 void display()
 {
-
-    int i = 0;
-    if (front == rear)
-    {
-        printf("Queue is Empty..\n");
-    }
+    if (rear == -1 && front == -1)
+        printf("\nQueue is Empty!!!");
     else
     {
-        printf("---------- Total Items -------------- \n");
-
-        while (i < rear)
-        {
-            printf("%d \n", myqueue[i]);
-            i++;
-        }
+        int i;
+        printf("\nQueue elements are:\n");
+        for (i = front; i <= rear; i++)
+            printf("%d  ", myqueue[i]);
     }
+    printf("\n");
 }
