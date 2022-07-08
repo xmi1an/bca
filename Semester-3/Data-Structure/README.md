@@ -30,10 +30,12 @@
 
 ## 16. Write a c program for implementing a Singly linked list and its operation.
 
-# 17. Write a c program for implementing a Doubly linked list and its operation.
+17. Write a c program for implementing a Doubly linked list and its operation.
 
-18. Write a c program to insert an element into Sorted linked list.
+## 18. Write a c program to insert an element into Sorted linked list.
 
 19. Write a c program for create a binary tree and its operation.
 
 20. Write a c program for DFS and BFS technique.
+
+https://pitch.com/public/78f5a1de-5aae-435d-8abd-e226c909d081
