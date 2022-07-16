@@ -6,33 +6,20 @@ int top = -1;
 
 void push(int val)
 {
-	if (isStackFull())
+	if (top == SIZE - 1)
 	{
 		printf("Stack is Full..\n");
 	}
 	else
 	{
-		top++;
 		my_stack[top] = val;
 		printf("Element Pushed : %d \n", val);
 	}
 }
 
-int isStackFull()
-{
-	if (top == SIZE - 1)
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
-}
-
 void pop()
 {
-	if (isStackEmpty())
+	if (top == -1)
 	{
 		printf("Stack is Empty..\n");
 	}
@@ -43,22 +30,10 @@ void pop()
 	}
 }
 
-int isStackEmpty()
-{
-	if (top == -1)
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
-}
-
 int length()
 {
-	int count = 0, i = 0;
-	if (isStackEmpty())
+	int i = 0;
+	if (top == -1)
 	{
 		printf("Stack is Empty..\n");
 	}
@@ -66,17 +41,16 @@ int length()
 	{
 		while (i <= top)
 		{
-			count++;
 			i++;
 		}
-		return count;
 	}
+	return i;
 }
 
 void display()
 {
 	int i = 0;
-	if (isStackEmpty())
+	if (top == -1)
 	{
 		printf("Stack is Empty..\n");
 	}
@@ -92,12 +66,26 @@ void display()
 
 void peek()
 {
-	int i = 0;
-	if (isStackEmpty())
+	if (top == -1)
 		printf("Stack is Empty..\n");
 
 	else
 		printf("Top Item is : %d \n", my_stack[top]);
+}
+
+void popall()
+{
+	if (top == -1)
+	{
+		printf("Stack is Empty..\n");
+	}
+	else
+	{
+		while (top != -1)
+		{
+			pop();
+		}
+	}
 }
 
 void main()
@@ -111,6 +99,8 @@ void main()
 		printf("3. Length \n");
 		printf("4. Display. \n");
 		printf("5. Peek. \n");
+		printf("6. Pop All. \n");
+		printf("0. Exit. \n");
 
 		printf("Enter Your Choice : ");
 		scanf("%d", &choice);
@@ -135,11 +125,15 @@ void main()
 		case 5:
 			peek();
 			break;
+		case 6:
+			popall();
+			break;
 		case 0:
+			printf("Bye Bye \n \n");
 			exit(1);
+
 		default:
 			printf("Invalid Choice. \n\n");
 		}
 	}
-	return 0;
 }

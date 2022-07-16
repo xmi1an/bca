@@ -82,19 +82,22 @@ void addAtAfter()
     }
     else
     {
+        temp = (struct node *)malloc(sizeof(struct node));
+        printf("Enter Node Data : ");
+        scanf("%d", &temp->data);
+        temp->left = NULL;
+        temp->right = NULL;
+        travel = head;
+
         while (i < loc)
         {
-            travel = travel->link;
+            travel = travel->right;
             i++;
         }
 
-        temp = (struct node *)malloc(sizeof(struct node));
-        printf("Enter Data To Insert in Node :");
-        scanf("%d", &temp->data);
-        temp->link = NULL;
-
-        temp->link = travel->link;
-        travel->link = temp;
+        temp->right = travel->right;
+        travel->right->left = temp;
+        travel->right = temp;
     }
 }
 
@@ -125,7 +128,7 @@ void deleteNode()
 
     else if (loc == 1)
     {
-        head = temp->link;
+        head = temp->right;
         temp->link = NULL;
         free(temp);
     }
