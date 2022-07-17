@@ -11,10 +11,17 @@ void push(char x)
 
 char pop()
 {
+    char item;
     if (top == -1)
+    {
         return -1;
+    }
     else
-        return stack[top--];
+    {
+        item = stack[top];
+        top--;
+        return item;
+    }
 }
 
 int priority(char x)
@@ -32,7 +39,7 @@ int priority(char x)
 
 int main()
 {
-    char exp[100];
+    char exp[10];
     char *e, x;
     printf("Enter the expression : ");
     scanf("%s", exp);
