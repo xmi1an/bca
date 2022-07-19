@@ -9,7 +9,6 @@ int partition(int a[], int s, int e)
 
     for (i = s; i <= e - 1; i++)
     {
-
         if (a[i] <= pivot)
         {
             int temp = a[i];

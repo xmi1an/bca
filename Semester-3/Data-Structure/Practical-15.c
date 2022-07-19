@@ -2,30 +2,30 @@
 
 #include <stdio.h>
 
-#define LENGTH 6
-int queue[LENGTH];
+#define SIZE 5
+int queue[SIZE];
 int front = -1;
 int rear = -1;
-// function to insert an element in a circular queue
+// Function to insert an element in a circular queue.
 void enqueue(int element)
 {
-    if (front == -1 && rear == -1) // check queue is empty
-    {
-        front = 0;
-        rear = 0;
-        queue[rear] = element;
-        printf("First Element Inserted. \n");
-    }
-
-    else if ((rear + 1) % LENGTH == front) // check queue is full
+    if ((rear + 1) % SIZE == front) // check queue is full
     {
         printf("Queue is Full.\n");
     }
 
+    else if (front == -1 && rear == -1) // check queue is empty
+    {
+        front = 0;
+        rear = 0;
+        queue[rear] = element;
+        printf("First Element Inserted. : %d \n", element);
+    }
     else
     {
-        rear = (rear + 1) % LENGTH; // rear is incremented
+        rear = (rear + 1) % SIZE; // rear is incremented
         queue[rear] = element;
+        printf("Element Inserted. : %d \n", element);
     }
 }
 
@@ -34,7 +34,7 @@ int dequeue()
 {
     if ((front == -1) && (rear == -1)) // check queue is empty
     {
-        printf("\nQueue is underflow..");
+        printf("\nQueue is Empty..");
     }
     else if (front == rear)
     {
@@ -45,7 +45,7 @@ int dequeue()
     else
     {
         printf("\nThe dequeued element is %d", queue[front]);
-        front = (front + 1) % LENGTH;
+        front = (front + 1) % SIZE;
     }
 }
 
@@ -59,11 +59,12 @@ void display()
     else
     {
         printf("\nElements in a Queue are :");
-        while (i <= rear)
+        while (i != rear)
         {
-            printf("%d,", queue[i]);
-            i = (i + 1) % LENGTH;
+            printf("%d : %d. ", i, queue[i]);
+            i = (i + 1) % SIZE;
         }
+        printf("%d : %d ", i, queue[i]);
     }
 }
 
@@ -98,7 +99,7 @@ void main()
             exit(0);
             break;
         default:
-            printf("Enter a Va1lid Choice.\n");
+            printf("Enter a Valid Choice.\n");
         }
     }
 }

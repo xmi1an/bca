@@ -1,3 +1,5 @@
+/* 10. Write a c program for implementing of stack and its operation. */
+
 #include <stdio.h>
 #define SIZE 5
 
