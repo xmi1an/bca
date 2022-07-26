@@ -1,6 +1,7 @@
 /*  1. Write a c program for linear search which find an element in an unsorted list. */
 
 #include <stdio.h>
+#include <conio.h>
 
 int searchItem(int *, int);
 
@@ -21,7 +22,7 @@ void main()
 {
     int arr[5] = {18, 30, 15, 70, 12};
     int item = 15, i, j = 0;
-
+    // clrscr();
     for (i = 0; i < 5; i++)
     {
         printf("%d \n", arr[i]);
@@ -37,4 +38,6 @@ void main()
     {
         printf("\nElement %d is found at %d position", item, result);
     }
+
+    getch();
 }

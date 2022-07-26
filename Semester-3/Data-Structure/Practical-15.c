@@ -6,7 +6,6 @@
 int queue[SIZE];
 int front = -1;
 int rear = -1;
-// Function to insert an element in a circular queue.
 void enqueue(int element)
 {
     if ((rear + 1) % SIZE == front) // check queue is full
@@ -14,13 +13,14 @@ void enqueue(int element)
         printf("Queue is Full.\n");
     }
 
-    else if (front == -1 && rear == -1) // check queue is empty
+    else if (front == -1 && rear == -1)
     {
         front = 0;
         rear = 0;
         queue[rear] = element;
         printf("First Element Inserted. : %d \n", element);
     }
+
     else
     {
         rear = (rear + 1) % SIZE; // rear is incremented
