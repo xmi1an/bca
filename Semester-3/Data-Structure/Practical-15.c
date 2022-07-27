@@ -6,30 +6,27 @@
 int queue[SIZE];
 int front = -1;
 int rear = -1;
-void enqueue(int element)
+
+void enqueue(int value)
 {
-    if ((rear + 1) % SIZE == front) // check queue is full
+    if ((rear + 1) % SIZE == front)
     {
-        printf("Queue is Full.\n");
+        printf("Queue is Full..\n");
     }
-
-    else if (front == -1 && rear == -1)
-    {
-        front = 0;
-        rear = 0;
-        queue[rear] = element;
-        printf("First Element Inserted. : %d \n", element);
-    }
-
     else
     {
-        rear = (rear + 1) % SIZE; // rear is incremented
-        queue[rear] = element;
-        printf("Element Inserted. : %d \n", element);
+        rear = (rear + 1) % SIZE;
+        queue[rear] = value;
+
+        printf("Inserted : %d \n", value);
+
+        if (front == -1)
+        {
+            front = 0;
+        }
     }
 }
 
-// function to delete the element from the queue
 int dequeue()
 {
     if ((front == -1) && (rear == -1)) // check queue is empty
