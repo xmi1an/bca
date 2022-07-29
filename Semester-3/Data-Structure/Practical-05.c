@@ -9,6 +9,7 @@ int main()
     int arr[size] = {9, 2, 1, 4, 3, 7, 5};
 
     printf("Before Sort..\n");
+
     for (i = 0; i < size; i++)
     {
         printf("%d ", arr[i]);

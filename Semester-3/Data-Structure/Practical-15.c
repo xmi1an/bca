@@ -9,7 +9,7 @@ int rear = -1;
 
 void enqueue(int value)
 {
-    if ((rear + 1) % SIZE == front)
+    if (front == rear + 1 || front == 0 && rear == SIZE - 1)
     {
         printf("Queue is Full..\n");
     }
@@ -19,7 +19,6 @@ void enqueue(int value)
         queue[rear] = value;
 
         printf("Inserted : %d \n", value);
-
         if (front == -1)
         {
             front = 0;

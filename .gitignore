@@ -5,7 +5,9 @@ cmake-build-debug
 CMakeCache.txt
 CMakeLists.txt
 *.exe
-# .gitignore
+
+# Sem 1
+
 # Sem 3
 Basics
 build
