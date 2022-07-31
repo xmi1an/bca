@@ -1,12 +1,14 @@
 /* 10. Write a c program for implementing of stack and its operation. */
 
 #include <stdio.h>
+#include <conio.h>
+
 #define SIZE 5
 
-int my_stack[SIZE];
+int stack[SIZE];
 int top = -1;
 
-void push(int val)
+void push(int value)
 {
 	if (top == SIZE - 1)
 	{
@@ -14,8 +16,9 @@ void push(int val)
 	}
 	else
 	{
-		my_stack[top] = val;
-		printf("Element Pushed : %d \n", val);
+		top++;
+		stack[top] = value;
+		printf("Element Pushed : %d \n", value);
 	}
 }
 
@@ -27,7 +30,7 @@ void pop()
 	}
 	else
 	{
-		printf("Element Popped : %d \n", my_stack[top]);
+		printf("Element Popped : %d \n", stack[top]);
 		top--;
 	}
 }
@@ -60,7 +63,7 @@ void display()
 	{
 		while (i <= top)
 		{
-			printf("%d \n", my_stack[i]);
+			printf("%d \n", stack[i]);
 			i++;
 		}
 	}
@@ -72,22 +75,7 @@ void peek()
 		printf("Stack is Empty..\n");
 
 	else
-		printf("Top Item is : %d \n", my_stack[top]);
-}
-
-void popall()
-{
-	if (top == -1)
-	{
-		printf("Stack is Empty..\n");
-	}
-	else
-	{
-		while (top != -1)
-		{
-			pop();
-		}
-	}
+		printf("Top Item is : %d \n", stack[top]);
 }
 
 void main()
@@ -101,7 +89,6 @@ void main()
 		printf("3. Length \n");
 		printf("4. Display. \n");
 		printf("5. Peek. \n");
-		printf("6. Pop All. \n");
 		printf("0. Exit. \n");
 
 		printf("Enter Your Choice : ");
@@ -126,9 +113,6 @@ void main()
 			break;
 		case 5:
 			peek();
-			break;
-		case 6:
-			popall();
 			break;
 		case 0:
 			printf("Bye Bye \n \n");

@@ -47,8 +47,20 @@ struct node *create()
     }
 }
 
+void preorder(struct node *root)
+{
+    if (root == NULL)
+        return;
+    printf("%d ", root->data);
+    preorder(root->left);
+    preorder(root->right);
+}
+
 void main()
 {
     struct node *root;
     root = create();
+    printf("Inorder traversal of the tree is : \n");
+
+    preorder(root);
 }

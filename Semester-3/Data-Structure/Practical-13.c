@@ -86,7 +86,6 @@ void main()
         printf("2. deQueue. \n");
         printf("3. Display. \n");
         printf("4. Length. \n");
-        printf("5. Delete all. \n");
         printf("0. Exit. \n");
 
         printf("Enter Your Choice : ");

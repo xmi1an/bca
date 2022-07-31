@@ -22,10 +22,11 @@ void main()
 {
     int arr[5] = {18, 30, 15, 70, 12};
     int item = 15, i, j = 0;
-    // clrscr();
+    clrscr();
+    printf("\n");
     for (i = 0; i < 5; i++)
     {
-        printf("%d \n", arr[i]);
+        printf("%d ", arr[i]);
     }
 
     int result = searchItem(arr, item);

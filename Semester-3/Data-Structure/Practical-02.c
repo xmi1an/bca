@@ -1,5 +1,7 @@
 /* 2. Write a c program for binary search which find the location of a given element in a list. */
+
 #include <stdio.h>
+#include <conio.h>
 int binarySearch(int array[], int x, int low, int high)
 {
     while (low <= high)

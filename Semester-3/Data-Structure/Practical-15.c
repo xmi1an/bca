@@ -1,13 +1,14 @@
-/* 15. Write a c program for implementing a circular queue and its operation. */
-
+/* 15. Write a c program for implementing a circular Queue and its operation. */
 #include <stdio.h>
 
 #define SIZE 5
-int queue[SIZE];
+
+int CQueue[SIZE];
+
 int front = -1;
 int rear = -1;
 
-void enqueue(int value)
+void enQueue(int value)
 {
     if (front == rear + 1 || front == 0 && rear == SIZE - 1)
     {
@@ -16,9 +17,10 @@ void enqueue(int value)
     else
     {
         rear = (rear + 1) % SIZE;
-        queue[rear] = value;
+        CQueue[rear] = value;
 
         printf("Inserted : %d \n", value);
+
         if (front == -1)
         {
             front = 0;
@@ -26,21 +28,21 @@ void enqueue(int value)
     }
 }
 
-int dequeue()
+int deQueue()
 {
-    if ((front == -1) && (rear == -1)) // check queue is empty
+    if ((front == -1) && (rear == -1)) // check CQueue is empty
     {
         printf("\nQueue is Empty..");
     }
     else if (front == rear)
     {
-        printf("\nThe dequeued element is %d", queue[front]);
+        printf("\nThe dequeued element is %d", CQueue[front]);
         front = -1;
         rear = -1;
     }
     else
     {
-        printf("\nThe dequeued element is %d", queue[front]);
+        printf("\nThe dequeued element is %d", CQueue[front]);
         front = (front + 1) % SIZE;
     }
 }
@@ -57,10 +59,10 @@ void display()
         printf("\nElements in a Queue are :");
         while (i != rear)
         {
-            printf("%d : %d. ", i, queue[i]);
+            printf("%d ", CQueue[i]);
             i = (i + 1) % SIZE;
         }
-        printf("%d : %d ", i, queue[i]);
+        printf("%d ", CQueue[i]);
     }
 }
 
@@ -68,7 +70,7 @@ void main()
 {
     int choice = 1, x;
 
-    while (1) // while loop
+    while (1)
     {
         printf("\n1: Insert.");
         printf("\n2: Delete.");
@@ -83,10 +85,10 @@ void main()
 
             printf("Enter the element : ");
             scanf("%d", &x);
-            enqueue(x);
+            enQueue(x);
             break;
         case 2:
-            dequeue();
+            deQueue();
             break;
         case 3:
             display();
