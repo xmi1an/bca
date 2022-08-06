@@ -1,4 +1,5 @@
 /* 15. Write a c program for implementing a circular Queue and its operation. */
+
 #include <stdio.h>
 
 #define SIZE 5
@@ -14,37 +15,49 @@ void enQueue(int value)
     {
         printf("Queue is Full..\n");
     }
+
+    else if (front == -1 && rear == -1)
+    {
+        front = 0;
+        rear = 0;
+        CQueue[rear] = value;
+    }
+    else if (rear == SIZE - 1)
+    {
+        rear = 0;
+        CQueue[rear] = value;
+        printf("Inserted : %d \n", value);
+    }
     else
     {
-        rear = (rear + 1) % SIZE;
+        rear++;
         CQueue[rear] = value;
 
-        printf("Inserted : %d  \n", value);
-
-        if (front == -1)
-        {
-            front = 0;
-        }
+        printf("Inserted : %d \n", value);
     }
 }
 
 int deQueue()
 {
-    if ((front == -1) && (rear == -1)) // check CQueue is empty
+    if (front == -1) // check CQueue is empty
     {
         printf("\nQueue is Empty..");
+    }
+    else if (front == rear)
+    {
+        printf("\nThe dequeued element is %d", CQueue[front]);
+        front = -1;
+        rear = -1;
+    }
+    else if (front == SIZE - 1)
+    {
+        printf("\nThe dequeued element is %d", CQueue[front]);
+        front = 0;
     }
     else
     {
         printf("\nThe dequeued element is %d", CQueue[front]);
-        front = (front + 1) % SIZE;
-
-        if (front == rear)
-        {
-            printf("\nThe dequeued element is %d", CQueue[front]);
-            front = -1;
-            rear = -1;
-        }
+        front++;
     }
 }
 
@@ -85,7 +98,7 @@ void main()
         case 1:
 
             printf("Enter the element : ");
-            scanf("%d ", &x);
+            scanf("%d", &x);
             enQueue(x);
             break;
         case 2:

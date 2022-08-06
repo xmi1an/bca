@@ -60,22 +60,39 @@ INSERT INTO
 VALUES
     (2, 1, 2, 20, '2015-01-02', 200);
 
-
 -- Show salesman table.
-select * from salesman;
+select
+    *
+from
+    salesman;
 
 -- Show customer table.
-select * from customer;
+select
+    *
+from
+    customer;
 
 -- Show orders table.
-select * from orders;
+select
+    *
+from
+    orders;
 
 -- Show orders for customer 1.
-select * from orders where cnum = 1;
+select
+    *
+from
+    orders
+where
+    cnum = 1;
 
 -- show order from snum where snum = 1; 
-select * from orders where snum = 1;
-
+select
+    *
+from
+    orders
+where
+    snum = 1;
 
 5.
 select
