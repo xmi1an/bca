@@ -126,7 +126,7 @@ void deleteRear()
     }
 }
 
-// Display function prints all the value of DEQ.
+// Display function prints all the value of Queue.
 void display()
 {
     int i = front;
@@ -167,7 +167,6 @@ void getRear()
 
 void main()
 {
-    // switch case for the operation of the queue.
     int choice;
 
     while (choice != 0)

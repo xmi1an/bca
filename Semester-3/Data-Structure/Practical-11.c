@@ -1,17 +1,22 @@
 /* 11. Write a c program which convert infix string to postfix string. */
+
 #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 
 char stack[20];
 int top = -1;
 
 void push(char x)
 {
-    stack[++top] = x;
+    top++;
+    stack[top] = x;
 }
 
 char pop()
 {
     char item;
+
     if (top == -1)
     {
         return -1;
@@ -24,45 +29,53 @@ char pop()
     }
 }
 
-int priority(char x)
+int priority(char sym)
 {
-    if (x == '(')
-        return 0;
-    if (x == '+' || x == '-')
-        return 1;
-    if (x == '*' || x == '/')
-        return 2;
-    if (x == '^')
+    if (sym == '^')
         return 3;
-    return 0;
+    else if (sym == '/' || sym == '*')
+        return 2;
+    else if (sym == '+' || sym == '-')
+        return 1;
+    else
+        return -1;
 }
 
-int main()
+void main()
 {
     char exp[10];
     char *e, x;
+
     printf("Enter the expression : ");
     scanf("%s", exp);
+
     printf("\n");
+
     e = exp;
 
     while (*e != '\0')
     {
         if (isalnum(*e))
             printf("%c ", *e);
+
         else if (*e == '(')
             push(*e);
+
         else if (*e == ')')
         {
-            while ((x = pop()) != '(')
+            while (x = pop() != '(')
                 printf("%c ", x);
         }
+
         else
         {
             while (priority(stack[top]) >= priority(*e))
+            {
                 printf("%c ", pop());
+            }
             push(*e);
         }
+
         e++;
     }
 
@@ -70,5 +83,4 @@ int main()
     {
         printf("%c ", pop());
     }
-    return 0;
 }

@@ -1,15 +1,17 @@
 /* 5. Write a c program for sorting using straight selection sort. */
+
 #include <stdio.h>
+#include <conio.h>
 
 #define size 6
+
 int main()
 {
     int i, min, findMin, temp;
 
-    int arr[size] = {9, 2, 1, 4, 3, 7, 5};
+    int arr[size] = {6, 2, 1, 4, 3, 5};
 
     printf("Before Sort..\n");
-
     for (i = 0; i < size; i++)
     {
         printf("%d ", arr[i]);
@@ -20,9 +22,9 @@ int main()
         min = i;
         for (findMin = i + 1; findMin < size; findMin++)
         {
-            if (arr[findMin] < arr[min]) // Find Minumum Value
+            if (arr[findMin] < arr[min])
             {
-                min = findMin; // update min
+                min = findMin;
             }
         }
 
@@ -30,10 +32,10 @@ int main()
         arr[i] = arr[min];
         arr[min] = temp;
     }
-    int k;
+
     printf("\n\nAfter Sort..\n");
-    for (k = 0; k < size; k++)
+    for (i = 0; i < size; i++)
     {
-        printf("%d ", arr[k]);
+        printf("%d ", arr[i]);
     }
 }
