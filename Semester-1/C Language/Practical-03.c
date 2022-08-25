@@ -6,15 +6,16 @@
 void main()
 {
     float pi = 3.14;
-    float r, area;
+    int r = 5;
+    float area;
 
     printf("\n");
 
     printf("Enter the value of r : ");
-    scanf("%f", &r);
+    // scanf("%f", &r);
 
     area = pi * r * r;
-    printf("Area : %f", area);
+    printf("Area : %.1f", area);
 
     getch();
 }

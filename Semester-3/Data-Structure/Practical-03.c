@@ -10,6 +10,12 @@ void main()
     int i, j, temp;
     int arr[size] = {18, 30, 15, 70, 12};
 
+    printf("\nUnsorted Array : \n");
+    for (i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+
     for (i = 0; i < size - 1; i++)
     {
         for (j = 0; j < size - 1 - i; j++)
@@ -23,7 +29,10 @@ void main()
         }
     }
 
-    printf("Sorted array is: ");
-    for (i = 0; i < 5; i++)
+    printf(" \nSorted array is: \n");
+    for (i = 0; i < size; i++)
+    {
         printf("%d ", arr[i]);
+    }
+    getch();
 }

@@ -1,7 +1,10 @@
 /*  6. Write a c program for sorting using insertion sort. */
+
 #include <stdio.h>
 #include <conio.h>
+
 #define SIZE 5
+
 void main()
 {
     int arr[SIZE] = {12, 11, 13, 5, 6};
@@ -13,6 +16,7 @@ void main()
     {
         printf("%d ", arr[i]);
     }
+
     printf("\n");
 
     for (i = 1; i < SIZE; i++)

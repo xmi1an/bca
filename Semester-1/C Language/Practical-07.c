@@ -1,5 +1,5 @@
 /* 7. Write a C program to enter a distance into K.M and convert it in to meter, feet,
-inches and Centimeter  */
+inches and Centimeter. */
 
 #include <stdio.h>
 #include <conio.h>

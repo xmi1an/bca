@@ -1,46 +1,48 @@
 /* 7. Write a c program for sorting using shell-sort method. */
 
 #include <stdio.h>
+#include <conio.h>
 
-int shellSort(int a[], int n)
+void shellSort(int a[], int n)
 {
-    int gap;
-    for (gap = n / 2; gap > 0; gap /= 2)
+    int gap = n / 2;
+    while (gap > 0)
     {
         int i = 0;
+
         for (i = gap; i < n; i++)
         {
             int temp = a[i];
-            int j;
-            for (j = i; j >= gap && a[j - gap] > temp; j = j - gap)
+            int j = i;
+
+            while (j >= gap && a[j - gap] > temp)
             {
                 a[j] = a[j - gap];
+                j = j - gap;
             }
             a[j] = temp;
         }
+
+        gap = gap / 2;
     }
-    return 0;
 }
 
-void printArr(int a[], int n) /* function to print the array elements */
+void main()
 {
     int i;
-    for (i = 0; i < n; i++)
-        printf("%d ", a[i]);
-}
+    int a[9] = {33, 31, 40, 8, 12, 17, 25, 42, 21};
 
-int main()
-{
-    int a[] = {33, 31, 40, 8, 12, 17, 25, 42};
-    int n = sizeof(a) / sizeof(a[0]);
+    // int n = sizeof(a) / sizeof(a[0]);
+
     printf("Before sorting array elements are - \n");
+    for (i = 0; i < 9; i++)
+        printf("%d ", a[i]);
 
-    printArr(a, n);
-
-    shellSort(a, n);
+    shellSort(a, 9);
 
     printf("\nAfter applying shell sort, the array elements are - \n");
+    for (i = 0; i < 9; i++)
+        printf("%d ", a[i]);
 
-    printArr(a, n);
-    return 0;
+    getch();
 }

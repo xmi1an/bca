@@ -39,13 +39,6 @@ VALUES
     (2001, 'Hardik', 'London', 100, 1001);
 
 --  7. create orders table.
--- create table orders (
---     onum int(4) unique,
---     ammount float(3),
---     odate date,
---     cnum int(4),
---     snum int(4)
--- );
 create table orders (
     onum int(4) primary key,
     amount int(6),
@@ -60,6 +53,7 @@ INSERT INTO
 VALUES
     (3001, 18.69, '10/03/99', 2006, 1007);
 
+-- Practicals
 -- 1. Produce the orders no, amount and date of all orderss.
 SELECT
     onum,
@@ -83,19 +77,15 @@ SELECT
     snum,
     commission
 FROM
-    salesman
-WHERE
-    snum = 1001;
+    salesman;
 
--- 4. List of snum of all salesmen with orderss in orders table without duplicates.
-SELECT
-    snum
-FROM
-    orders
-GROUP BY
-    snum;
+-- 4. List of snum of all salesmen with orders in orders table without duplicates.
+select
+    DISTINCT snum
+from
+    orders;
 
--- 5. List of all orderss for more than Rs.1000.
+-- 5. List of all orders for more than Rs.1000.
 SELECT
     *
 FROM
@@ -103,7 +93,7 @@ FROM
 WHERE
     ammount > 1000;
 
--- 6. List out names and cities of all salesmen in London with commission above 10 %
+-- 6. List out names and cities of all salesmen in London with commission above 10%.
 SELECT
     sname,
     city
@@ -119,27 +109,24 @@ SELECT
 FROM
     customer
 WHERE
-    rating > 100
-    AND city != 'Rome';
+    NOT (
+        rating <= 100
+        OR city = 'Rome'
+    );
 
--- 8. List all orders for more than Rs.1000 except the orderss of snum, 1006 of 10/03/99
+-- 8. List all orders for more than Rs.1000 except the orders of snum, 1006 of 10/03/99
 SELECT
     *
 FROM
     orders
 WHERE
     ammount > 1000
-    AND onum NOT IN (
-        SELECT
-            onum
-        FROM
-            orders
-        WHERE
-            snum = 1006
-            AND odate = '10/03/99'
+    AND NOT (
+        snum = 1006
+        AND odate = '10/03/1999'
     );
 
--- 9. List all orderss taken on 10th March, April and June 1999.
+-- 9. List all orders taken on 10th March, April and June 1999.
 SELECT
     *
 FROM
@@ -160,6 +147,15 @@ WHERE
     cname LIKE 'C%';
 
 -- 11. List all customers whose names begins with letter 'A' to 'G'.
+select
+    *
+from
+    customer
+where
+    cname between ('a%')
+    and ('h%');
+
+-- OR
 SELECT
     *
 FROM

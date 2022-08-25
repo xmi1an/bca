@@ -32,6 +32,7 @@ void insertFront(int value)
         DEQ[front] = value;
         printf("Element Inserted from front : %d \n", value);
     }
+
     else if (front == 0)
     {
         front = size - 1;
@@ -126,7 +127,6 @@ void deleteRear()
     }
 }
 
-// Display function prints all the value of Queue.
 void display()
 {
     int i = front;
@@ -183,7 +183,7 @@ void main()
         printf("\nEnter your choice : ");
         scanf("%d", &choice);
 
-        switch (choice)
+        switch (1)
         {
         case 1:
         {

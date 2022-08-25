@@ -8,6 +8,7 @@ int searchItem(int *, int);
 int searchItem(int a[], int search)
 {
     int j = 0;
+
     for (j = 0; j < 5; j++)
     {
         if (a[j] == search)
@@ -21,9 +22,11 @@ int searchItem(int a[], int search)
 void main()
 {
     int arr[5] = {18, 30, 15, 70, 12};
-    int item = 15, i, j = 0;
-    clrscr();
-    printf("\n");
+
+    int item = 5, i;
+
+    // clrscr();
+
     for (i = 0; i < 5; i++)
     {
         printf("%d ", arr[i]);
@@ -33,7 +36,7 @@ void main()
 
     if (result == -1)
     {
-        printf("Item Not Found..!\n");
+        printf("\nItem Not Found..!\n");
     }
     else
     {

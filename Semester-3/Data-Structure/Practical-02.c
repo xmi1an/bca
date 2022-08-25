@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <conio.h>
+
 int binarySearch(int array[], int x, int low, int high)
 {
     while (low <= high)
@@ -25,9 +26,10 @@ void main()
 {
     int array[10] = {4, 10, 16, 24, 32, 46, 76, 112, 144, 186};
 
-    int search = 46;
+    int search = 6;
 
     int result = binarySearch(array, search, 0, 9);
+
     if (result == -1)
         printf("Not found");
     else
