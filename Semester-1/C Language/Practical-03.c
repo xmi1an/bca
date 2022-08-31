@@ -12,9 +12,10 @@ void main()
     printf("\n");
 
     printf("Enter the value of r : ");
-    // scanf("%f", &r);
+    scanf("%d", &r);
 
     area = pi * r * r;
+
     printf("Area : %.1f", area);
 
     getch();

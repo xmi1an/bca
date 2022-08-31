@@ -114,7 +114,7 @@ WHERE
         OR city = 'Rome'
     );
 
--- 8. List all orders for more than Rs.1000 except the orders of snum, 1006 of 10/03/99
+-- 8. List all orders for more than Rs.1000 except the orders of snum, 1006 of 10/03/99.
 SELECT
     *
 FROM
@@ -122,8 +122,8 @@ FROM
 WHERE
     ammount > 1000
     AND NOT (
-        snum = 1006
-        AND odate = '10/03/1999'
+        odate = '10/03/99'
+        AND snum = 1006
     );
 
 -- 9. List all orders taken on 10th March, April and June 1999.
@@ -178,14 +178,16 @@ WHERE
     ammount = 0
     OR ammount IS NULL;
 
--- 13. Find out the largest orderss of salesman 1002 and 1007.
+-- 13. Find out the largest order of salesman 1002 and 1007.
 SELECT
     *
 FROM
     orders
 WHERE
     snum = 1002
-    OR snum = 1007 orders BY ammount DESC
+    OR snum = 1007
+order BY
+    ammount DESC
 LIMIT
     1;
 
@@ -196,35 +198,35 @@ SELECT
 FROM
     orders;
 
--- Count the no. of salesmen currently having orderss.
+-- 15. Count the no. of salesmen currently having orders.
 SELECT
-    COUNT(*)
+    COUNT(snum),
+    snum
 FROM
     orders
-GROUP BY
+GROUP by
     snum;
 
--- Find the largest orders taken by each salesman on each date.
-SELECT
-    sname,
+-- 16. Find the largest orders taken by each salesman on each date.
+select
+    snum,
     odate,
-    ammount
-FROM
+    max(ammount)
+from
     orders
-GROUP BY
-    sname,
-    odate orders BY ammount DESC;
+group by
+    snum;
 
--- Find out each customer 's smallest orders.
+-- 17. Find out each customer's smallest orders.
 SELECT
-    cname,
+    cnum,
     MIN(ammount)
 FROM
     orders
 GROUP BY
-    cname;
+    cnum;
 
--- Find out the customer in alphabetical orders whose name begins with 'G'.
+-- 18. Find out the customer in alphabetical orders whose name begins with 'G'.
 SELECT
     cname
 FROM

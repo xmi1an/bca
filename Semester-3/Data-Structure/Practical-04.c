@@ -2,40 +2,36 @@
 #include <stdio.h>
 #include <conio.h>
 
+void swap(int *a, int *b)
+{
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
 int partition(int a[], int s, int e)
 {
     int pivot = a[e];
     int pIndex = s;
     int i;
-
     for (i = s; i <= e - 1; i++)
     {
         if (a[i] <= pivot)
         {
-            int temp = a[i];
-            a[i] = a[pIndex];
-            a[pIndex] = temp;
-
+            swap(&a[i], &a[pIndex]);
             pIndex++;
         }
     }
-
-    // Swap end value with pIndex.
-    int temp = a[e];
-    a[e] = a[pIndex];
-    a[pIndex] = temp;
-
+    swap(&a[e], &a[pIndex]);
     return pIndex;
 }
-
 void quickSort(int a[], int s, int e)
 {
-    int pIndex;
+    int p;
     if (s < e)
     {
-        pIndex = partition(a, s, e);
-        quickSort(a, s, pIndex - 1);
-        quickSort(a, (pIndex + 1), e);
+        p = partition(a, s, e);
+        quickSort(a, s, p - 1);
+        quickSort(a, p + 1, e);
     }
 }
 

@@ -2,15 +2,15 @@
 #include <stdio.h>
 
 /* Function to merge the subarrays of a[] */
+
 void merge(int a[], int start, int mid, int end)
 {
-    int i = start;   // initial index of first sub-array.
-    int j = mid + 1; // initial index of second sub-array.
-
+    int i = start;
+    int j = mid + 1;
     int b[20];
     int k = start;
 
-    while (i <= mid && j <= end) // while both sub-arrays are not empty.
+    while (i <= mid && j <= end)
     {
         if (a[i] <= a[j])
         {
@@ -53,14 +53,14 @@ void merge(int a[], int start, int mid, int end)
 
 void divide(int a[], int start, int end)
 {
-    if (start < end) // if there is more than one element.
+    if (start < end)
     {
         int mid = (start + end) / 2;
 
-        divide(a, start, mid);   // Divide the first sub-array
-        divide(a, mid + 1, end); // Divide the second sub-array
+        divide(a, start, mid);
+        divide(a, mid + 1, end);
 
-        merge(a, start, mid, end); // Merge the two sub-arrays
+        merge(a, start, mid, end);
     }
 }
 

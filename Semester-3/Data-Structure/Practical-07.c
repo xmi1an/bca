@@ -3,29 +3,27 @@
 #include <stdio.h>
 #include <conio.h>
 
-void shellSort(int a[], int n)
-{
-    int gap = n / 2;
-    while (gap > 0)
+    void shellSort(int a[], int n)
     {
-        int i = 0;
-
-        for (i = gap; i < n; i++)
+        int gap = n / 2;
+        while (gap > 0)
         {
-            int temp = a[i];
-            int j = i;
-
-            while (j >= gap && a[j - gap] > temp)
+            int i;
+            for (i = gap; i < n; i++)
             {
-                a[j] = a[j - gap];
-                j = j - gap;
-            }
-            a[j] = temp;
-        }
+                int key = a[i];
+                int j = i;
 
-        gap = gap / 2;
+                while (j >= gap && a[j - gap] > key)
+                {
+                    a[j] = a[j - gap];
+                    j = j - gap;
+                }
+                a[j] = key;
+            }
+            gap = gap / 2;
+        }
     }
-}
 
 void main()
 {

@@ -6,27 +6,20 @@ are: Rectangle=l *b*h, triangle = (I * b)* 0.5, cube = L*L*L
 
 void main()
 {
-    float t;
-    int l, b, h, r, c;
 
-    // clrscr();
+    int rectangle;
+    int cube;
+    float triangle;
 
-    printf(" Enter the Value of l : ");
-    scanf("%d", &l);
+    int length = 25, breadth = 5, height = 4;
 
-    printf("\n Enter the of b : ");
-    scanf("%d", &b);
+    rectangle = length * breadth;
+    cube = length * length * length;
+    triangle = (length * breadth) * 0.5;
 
-    printf("\n Enter the value of h : ");
-    scanf("%d", &h);
-
-    r = l * b * h;
-    c = l * l * l;
-    t = (l * b) * 0.5;
-
-    printf("\n Rectangle :%d ", r);
-    printf("\n Cube : %d", c);
-    printf("\n Triangle : %f \n", t);
+    printf("\n Rectangle :%d ", rectangle);
+    printf("\n Cube : %d", cube);
+    printf("\n Triangle : %.2f \n", triangle);
 
     getch();
 }
