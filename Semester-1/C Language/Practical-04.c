@@ -19,7 +19,7 @@ void main()
 
     printf("\n Rectangle :%d ", rectangle);
     printf("\n Cube : %d", cube);
-    printf("\n Triangle : %.2f \n", triangle);
+    printf("\n Tringle : %.2f \n", triangle);
 
     getch();
 }

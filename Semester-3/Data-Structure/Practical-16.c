@@ -17,6 +17,7 @@ struct node
 };
 
 struct node *head = NULL;
+
 int len;
 int main()
 {
@@ -60,10 +61,14 @@ int main()
 void append()
 {
     struct node *temp;
+
     temp = (struct node *)malloc(sizeof(struct node));
+
     printf("Enter Data : ");
     scanf("%d", &temp->data);
+
     printf("Data Inserted : %d \n\n", temp->data);
+
     temp->link = NULL;
     if (head == NULL)
         head = temp;

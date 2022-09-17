@@ -25,7 +25,7 @@ void main()
 
     int item = 5, i;
 
-    // clrscr();
+    clrscr();
 
     for (i = 0; i < 5; i++)
     {

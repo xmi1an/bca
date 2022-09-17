@@ -7,7 +7,7 @@ void main()
     int f;
     float c;
 
-    clrscr();
+    // clrscr();
 
     printf("\nEnter the value of f : ");
     scanf("%d", &f);

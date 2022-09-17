@@ -132,11 +132,7 @@ SELECT
 FROM
     orders
 WHERE
-    odate IN (
-        '10/03/1999',
-        '10/04/1999',
-        '10/06/1999'
-    );
+    odate IN ('1999/03/10', '1999/04/10', '1999/06/10');
 
 -- 10. List all customers whose names begin with a letter 'C'.
 SELECT
@@ -169,14 +165,14 @@ WHERE
     OR cname LIKE 'F%'
     OR cname LIKE 'G%';
 
--- 12.List all orderss with zero or NULL amount.
+-- 12.List all orders with zero or NULL amount.
 SELECT
     *
 FROM
     orders
 WHERE
     ammount = 0
-    OR ammount IS NULL;
+    OR ammount = NULL;
 
 -- 13. Find out the largest order of salesman 1002 and 1007.
 SELECT
@@ -191,7 +187,7 @@ order BY
 LIMIT
     1;
 
--- 14. Calculate the Average and Sum of amount ordersed.
+-- 14. Calculate the Average and Sum of amount orders.
 SELECT
     AVG(ammount),
     SUM(ammount)
@@ -220,7 +216,7 @@ group by
 -- 17. Find out each customer's smallest orders.
 SELECT
     cnum,
-    MIN(ammount)
+    MIN(ammount) AS "Smallest Order"
 FROM
     orders
 GROUP BY
@@ -228,10 +224,115 @@ GROUP BY
 
 -- 18. Find out the customer in alphabetical orders whose name begins with 'G'.
 SELECT
-    cname
+    *
 FROM
     customer
 WHERE
     cname LIKE 'G%'
 ORDER BY
     cname;
+
+-- 19 Display the no. of order for each day in the following format.
+-- There are "X"(No. of Orders) Orders on "Y"(Date in dd - mon - yy).
+SELECT
+    onum as X,
+    DATE_FORMAT(odate, ' %d - %m - %y') as Y
+FROM
+    orders;
+
+-- 20 Assume each salesperson has a 12% commission.
+-- Write a query on the order table that will Produce the Order number, salesman no. and amount of commission for that order.
+SELECT
+    onum,
+    snum,
+    ammount * 0.12
+FROM
+    orders;
+
+-- 21 List all customers in descending order of rating.
+SELECT
+    *
+FROM
+    customer
+ORDER BY
+    rating DESC;
+
+-- 22 Show the name of all customers with their salesman's name.
+SELECT
+    salesman.sname,
+    customer.cname
+FROM
+    customer,
+    salesman
+WHERE
+    customer.snum = salesman.snum;
+
+-- OR
+SELECT
+    cname,
+    sname
+FROM
+    customer
+    INNER JOIN salesman ON customer.snum = salesman.snum;
+
+-- 23. List all orders with the names of their customer and salesman.
+SELECT
+    onum,
+    sname cname,
+FROM
+    orders
+    INNER JOIN customer ON orders.cnum = customer.cnum
+    INNER JOIN salesman ON orders.snum = salesman.snum;
+
+-- 24. List all orders by the customers not located in the same city as their salesman.
+SELECT
+    onum,
+    sname,
+    cname
+FROM
+    orders
+    INNER JOIN customer ON orders.cnum = customer.cnum
+    INNER JOIN salesman ON orders.snum = salesman.snum
+WHERE
+    customer.city != salesman.city;
+
+-- 25. List all customers serviced by salesman with commission above 12%.
+SELECT
+    cname,
+    sname,
+    commission
+FROM
+    customer
+    INNER JOIN salesman ON customer.snum = salesman.snum
+WHERE
+    commission > 12;
+
+-- 26. Find all pairs of customers having the same rating without duplication.
+SELECT
+    c1.cname,
+    c1.rating,
+    c2.cname,
+    c2.rating
+FROM
+    customer c1,
+    customer c2
+WHERE
+    c1.rating = c2.rating
+    AND c1.cnum != c2.cnum;
+
+-- 27 List all customers located in cities where salesman Niraj has customers.
+SELECT
+    cname,
+    city
+FROM
+    customer
+WHERE
+    city IN (
+        SELECT
+            city
+        FROM
+            customer
+            INNER JOIN salesman ON customer.snum = salesman.snum
+        WHERE
+            sname = 'Niraj'
+    );

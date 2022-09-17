@@ -5,20 +5,20 @@ inches and Centimeter. */
 #include <conio.h>
 void main()
 {
-    long int km, f, m, cm;
-    float i;
-    clrscr();
+    float km, f, m, cm, i;
 
-    printf("\nEnter Kilometer : ");
-    scanf("%ld", &km);
+    // clrscr();
+
+    printf("Enter Kilometer : ");
+    scanf("%f", &km);
 
     m = km * 1000;
-    f = km * 32748;
-    i = km * 3448.38;
+    f = km * 3280.84;
+    i = km * 39370;
     cm = km * 100000;
 
-    printf("\n Meter : %ld", m);
-    printf("\n Feet : %ld", f);
-    printf("\n Inch :%f", i);
-    printf("\n Centimeter= %ld", cm);
+    printf("\nMeter : %.2f \n", m);
+    printf("Feet : %.2f \n", f);
+    printf("Inch :%.2f \n", i);
+    printf("Centimeter= %.2f \n", cm);
 }

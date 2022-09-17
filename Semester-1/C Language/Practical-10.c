@@ -27,4 +27,6 @@ void main()
     printf("\nSubtraction : %d", sub);
     printf("\nMultiplication : %d", multiply);
     printf("\nDivision : %f", d);
+
+    getch();
 }

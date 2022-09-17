@@ -6,7 +6,7 @@
 void main()
 {
     float pi = 3.14;
-    int r = 5;
+    int r;
     float area;
 
     printf("\n");
