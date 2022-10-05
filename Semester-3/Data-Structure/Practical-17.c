@@ -1,208 +1,295 @@
 /* 17. Write a c program for implementing a Doubly linked list and its operation. */
 
 #include <stdio.h>
-#include <conio.h>
 #include <stdlib.h>
-void append();
-void addAtBegin();
-void addAtAfter();
-int length();
-void display();
-void deleteNode();
 
 struct node
 {
+    struct node *prev;
+    struct node *next;
     int data;
-    struct node *left;
-    struct node *right;
 };
 
 struct node *head = NULL;
-int len;
 
-void append()
+void prepend();
+void append();
+int lenght();
+void display();
+void addAtAfter();
+void deletion_beginning();
+void deletion_last();
+void deletion_specified();
+void search();
+
+void main()
 {
-    struct node *temp;
-    temp = (struct node *)malloc(sizeof(struct node));
-    printf("Enter Data : ");
-    scanf("%d", &temp->data);
-    printf("Data Inserted : %d \n\n", temp->data);
-    temp->left = NULL;
-    temp->right = NULL;
-    if (head == NULL)
-        head = temp;
-    else
+    int choice = 0;
+    int len;
+    while (choice != 9)
     {
-        struct node *travel;
-        travel = head;
-        while (travel->right != NULL)
-        {
-            travel = travel->right;
-        }
-        travel->right = temp;
-        temp->left = travel;
-    }
-}
+        printf("1.Insert at begining \n");
+        printf("2.Insert at last \n");
+        printf("3.Insert at any random location \n");
+        printf("4.Delete from Beginning \n");
+        printf("5.Delete from last \n");
+        printf("6.Delete the node after the given data \n");
+        printf("7.Search \n");
+        printf("8.Display\n");
+        printf("9.Length\n");
+        printf("0.Exit\n");
 
-void addAtBegin()
-{
-    struct node *temp;
-    temp = (struct node *)malloc(sizeof(struct node)); //&5000 data=50 link=head head=temp
-    printf("Enter Data to Insert at Begin : ");
-    scanf("%d", &temp->data);
+        printf("\nEnter your choice : ");
+        scanf("\n%d", &choice);
 
-    temp->left = NULL;
-    temp->right = NULL;
-
-    if (head == NULL)
-    {
-        head = temp;
-    }
-    else
-    {
-        temp->right = head;
-        head->left = temp;
-        head = temp;
-    }
-
-    printf("Data Inserted at Begin : %d \n", temp->data);
-}
-
-void addAtAfter()
-{
-    struct node *travel = head, *temp;
-    int loc, len, i = 1;
-    printf("Enter Location : ");
-    scanf("%d", &loc);
-    len = length();
-    if (loc > len)
-    {
-        printf("Invalid Location.\n");
-        printf("Total Nodes is : %d \n\n", len);
-    }
-    else
-    {
-        temp = (struct node *)malloc(sizeof(struct node));
-        printf("Enter Node Data : ");
-        scanf("%d", &temp->data);
-        temp->left = NULL;
-        temp->right = NULL;
-        travel = head;
-
-        while (i < loc)
-        {
-            travel = travel->right;
-            i++;
-        }
-
-        temp->right = travel->right;
-        travel->right->left = temp;
-        travel->right = temp;
-    }
-}
-
-int length()
-{
-    int count = 0;
-    struct node *temp;
-    temp = head;
-    while (temp != NULL)
-    {
-        count++;
-        temp = temp->right;
-    }
-    return count;
-}
-
-void deleteNode()
-{
-    struct node *temp = head;
-    int loc;
-    display();
-    printf("Enter Location To Delete : ");
-    scanf("%d", &loc);
-    if (loc > length())
-    {
-        printf("Invalid Location.\n\n");
-    }
-
-    else if (loc == 1)
-    {
-        head = temp->right;
-        temp->link = NULL;
-        free(temp);
-    }
-    else
-    {
-        struct node *travel = head, *del;
-        int i = 1;
-        while (i < loc - 1)
-        {
-            travel = travel->link;
-            i++;
-        }
-        del = travel->link;
-        travel->link = del->link;
-        del->link = NULL;
-        free(del);
-    }
-}
-
-void display()
-{
-    if (head == NULL)
-    {
-        printf("No Elements in Linked List..\n\n");
-    }
-    else
-    {
-        struct node *temp;
-        temp = head;
-        int cnt = 1;
-        while (temp != NULL)
-        {
-            printf("%d. %d\n", cnt, temp->data);
-            temp = temp->link;
-            cnt++;
-        }
-    }
-}
-
-int main()
-{
-    int ch;
-    while (1)
-    {
-        printf(" 1. Append. \n 2. Add At Begin. \n 3. Add At After. \n 4. Length. \n 5. Display. \n 6. Delete. \n 0. Quit.\n");
-        printf("\n\n Enter Your Choice : ");
-        scanf("%d", &ch);
-        switch (ch)
+        switch (choice)
         {
         case 1:
-            append();
+            prepend();
             break;
         case 2:
-            addAtBegin();
+            append();
             break;
         case 3:
             addAtAfter();
             break;
         case 4:
-            len = length();
-            printf("Length : %d \n", len);
+            deletion_beginning();
             break;
         case 5:
-            display();
+            deletion_last();
             break;
         case 6:
-            deleteNode();
+            deletion_specified();
+            break;
+        case 7:
+            search();
+            break;
+        case 8:
+            display();
+            break;
+        case 9:
+            len = lenght();
+            printf("Length is : %d", len);
             break;
         case 0:
-            printf("Bye Bye..!. \n\n");
             exit(0);
+            break;
         default:
-            printf("Invalid Choice. \n\n");
+            printf("Please enter valid choice..");
         }
     }
-    return 0;
+}
+
+void append()
+{
+    struct node *ptr, *temp;
+    temp = (struct node *)malloc(sizeof(struct node));
+
+    scanf("%d", &temp->data);
+
+    temp->next = NULL;
+    temp->prev = NULL;
+
+    if (head == NULL)
+        head = temp;
+    else
+    {
+        ptr = head;
+        while (ptr->next != NULL)
+        {
+            ptr = ptr->next;
+        }
+        ptr->next = temp;
+        temp->prev = ptr;
+    }
+}
+
+void prepend()
+{
+    struct node *temp;
+    temp = (struct node *)malloc(sizeof(struct node));
+    printf("Enter Item value : ");
+    scanf("%d", &temp->data);
+
+    temp->next = NULL;
+    temp->prev = NULL;
+
+    if (head == NULL)
+    {
+
+        head = temp;
+    }
+    else
+    {
+        temp->next = head;
+        head->prev = temp;
+        head = temp;
+    }
+}
+
+int lenght()
+{
+    struct node *prt = head;
+    int count = 0;
+
+    while (prt != NULL)
+    {
+        count++;
+        prt = prt->next;
+    }
+    return count;
+}
+
+void addAtAfter()
+{
+    struct node *ptr, *temp;
+    int len, loc, i = 1;
+
+    scanf("%d", &loc);
+
+    len = lenght();
+    if (loc > len)
+    {
+        printf("Invalid Location..\n");
+    }
+    else
+    {
+        temp = (struct node *)malloc(sizeof(struct node));
+        scanf("%d", &temp->data);
+        temp->prev = NULL;
+        temp->next = NULL;
+        ptr = head;
+        while (i < loc)
+        {
+            ptr = ptr->next;
+            i++;
+        }
+        temp->next = ptr->next;
+        ptr->next->prev = temp;
+        temp->prev = ptr;
+        ptr->next = temp;
+    }
+}
+
+void deletion_beginning()
+{
+    struct node *del;
+    if (head == NULL)
+    {
+        printf("\n There is No Node in List..\n");
+    }
+    else if (head->next == NULL)
+    {
+        head = NULL;
+        free(head);
+        printf("\n Node Deleted\n");
+    }
+    else
+    {
+        del = head;
+        head = head->next;
+        head->prev = NULL;
+        free(del);
+        printf("\nNode Deleted\n");
+    }
+}
+
+void deletion_last()
+{
+    struct node *ptr;
+    if (head == NULL)
+    {
+        printf("\n There is No Node in List..\n");
+    }
+    else if (head->next == NULL)
+    {
+        head = NULL;
+        free(head);
+        printf("\nNode Deleted\n");
+    }
+    else
+    {
+        ptr = head;
+        if (ptr->next != NULL)
+        {
+            ptr = ptr->next;
+        }
+        ptr->prev->next = NULL;
+        free(ptr);
+        printf("\nNode deleted\n");
+    }
+}
+
+void deletion_specified()
+{
+    struct node *ptr, *temp;
+    int val;
+    printf("\n Enter the data after which the node is to be deleted : ");
+    scanf("%d", &val);
+    ptr = head;
+    while (ptr->data != val)
+        ptr = ptr->next;
+    if (ptr->next == NULL)
+    {
+        printf("\nCan't delete\n");
+    }
+    else if (ptr->next->next == NULL)
+    {
+        ptr->next = NULL;
+    }
+    else
+    {
+        temp = ptr->next;
+        ptr->next = temp->next;
+        temp->next->prev = ptr;
+        free(temp);
+        printf("\nnode deleted\n");
+    }
+}
+
+void display()
+{
+    struct node *ptr;
+    ptr = head;
+    while (ptr != NULL)
+    {
+        printf("%d\n", ptr->data);
+        ptr = ptr->next;
+    }
+}
+
+void search()
+{
+    struct node *ptr;
+    int item, i = 0, found = 0;
+    ptr = head;
+    if (ptr == NULL)
+    {
+        printf("\nEmpty List\n");
+    }
+    else
+    {
+        printf("\nEnter item which you want to search?\n");
+        scanf("%d", &item);
+        while (ptr != NULL)
+        {
+            if (ptr->data == item)
+            {
+                printf("\nitem found at location %d \n", i + 1);
+                found = 1;
+                break;
+            }
+            else
+            {
+                found = 0;
+            }
+            i++;
+            ptr = ptr->next;
+        }
+        if (found == 0)
+        {
+            printf("\nItem not found\n");
+        }
+    }
 }

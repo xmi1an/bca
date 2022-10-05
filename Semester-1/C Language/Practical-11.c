@@ -7,16 +7,16 @@
 
 void main()
 {
-    int d, y, m, rd;
+    int days, year, mon, rd;
     // clrscr();
     printf("Enter Days:");
-    scanf("%d", &d);
+    scanf("%d", &days);
 
-    y = d / 365;
-    m = (d - (365 * y)) / 30;
-    rd = (d - (365 * y) - (m * 30));
+    year = days / 365;
+    mon = (days - (365 * year)) / 30;
+    rd = (days - (365 * year) - (mon * 30));
 
-    printf("Year : %d \n", y);
-    printf("Month : %d \n", m);
+    printf("Year : %d \n", year);
+    printf("Month : %d \n", mon);
     printf("Reminder Day : %d \n", rd);
 }

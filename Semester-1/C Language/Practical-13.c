@@ -1,5 +1,5 @@
 /*
-3. Write a C program to find the maximum number from given three numbers.
+13. Write a C program to find the maximum number from given three numbers.
 */
 
 #include <stdio.h>

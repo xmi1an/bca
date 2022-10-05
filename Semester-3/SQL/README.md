@@ -48,9 +48,9 @@
 
 ## 25 List all customers serviced by salesman with commission above 12%.
 
-## 26 Find all pairs of customers having the same rating with out duplication.
+## 26 Find all pairs of customers having the same rating without duplication.
 
-## 27 List all customers located in cities where salesman Niraj has customers.
+## 27. List all customers located in cities where salesman Niraj has customers.
 
 ## 28 List all salesmen who are living in the same city without duplicate rows.
 
@@ -60,11 +60,11 @@
 
 ## 31 Find all orders of the salesman who services 'Hardik'.
 
-## 32 List all orders that are greater than the average of April 10, 1999.
+## 32. List all orders that are greater than the average of April 10, 1999.
 
 ## 33 Count the no. of customers with the rating above than the average rating of 'Surat'.
 
-## 34 Using correlated sub query find the name and number of all customer with rating equal to Maximum for their city.
+## 34. Using correlated sub query find the name and number of all customer with rating equal to Maximum for their city.
 
 ## 35 Find all customers having rating greater than any customer in 'Rome'.
 

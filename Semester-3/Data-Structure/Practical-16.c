@@ -19,45 +19,6 @@ struct node
 struct node *head = NULL;
 
 int len;
-int main()
-{
-    int ch;
-    while (1)
-    {
-        printf(" 1. Append. \n 2. Add At Begin. \n 3. Add At After. \n 4. Length. \n 5. Display. \n 6. Delete. \n 0. Quit.\n");
-        printf("\n\n Enter Your Choice : ");
-        scanf("%d", &ch);
-        switch (ch)
-        {
-        case 1:
-            append();
-            break;
-        case 2:
-            addAtBegin();
-            break;
-        case 3:
-            addAtAfter();
-            break;
-        case 4:
-            len = length();
-            printf("Length : %d \n", len);
-            break;
-        case 5:
-            display();
-            break;
-        case 6:
-            deleteNode();
-            break;
-        case 0:
-            printf("Bye Bye..!. \n\n");
-            exit(0);
-        default:
-            printf("Invalid Choice. \n\n");
-        }
-    }
-    return 0;
-}
-
 void append()
 {
     struct node *temp;
@@ -87,9 +48,9 @@ void append()
 void addAtBegin()
 {
     struct node *temp;
-    temp = (struct node *)malloc(sizeof(struct node)); //&5000 data=50 link=head head=temp
+    temp = (struct node *)malloc(sizeof(struct node));
     printf("Enter Data to Insert at Begin : ");
-    scanf("%d", &temp->data); // 50
+    scanf("%d", &temp->data);
     temp->link = head;
     head = temp;
 
@@ -188,6 +149,44 @@ void display()
             printf("%d. %d\n", cnt, temp->data);
             temp = temp->link;
             cnt++;
+        }
+    }
+}
+
+void main()
+{
+    int ch;
+    while (1)
+    {
+        printf(" 1. Append. \n 2. Add At Begin. \n 3. Add At After. \n 4. Length. \n 5. Display. \n 6. Delete. \n 0. Quit.\n");
+        printf("\n\n Enter Your Choice : ");
+        scanf("%d", &ch);
+        switch (ch)
+        {
+        case 1:
+            append();
+            break;
+        case 2:
+            addAtBegin();
+            break;
+        case 3:
+            addAtAfter();
+            break;
+        case 4:
+            len = length();
+            printf("Length : %d \n", len);
+            break;
+        case 5:
+            display();
+            break;
+        case 6:
+            deleteNode();
+            break;
+        case 0:
+            printf("Bye Bye..!. \n\n");
+            exit(0);
+        default:
+            printf("Invalid Choice. \n\n");
         }
     }
 }

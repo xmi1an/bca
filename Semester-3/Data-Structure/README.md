@@ -18,7 +18,7 @@
 
 ## 10. Write a c program for implementing of stack and its operation.
 
-11. Write a c program which convert infix string to postfix string.
+## 11. Write a c program which convert infix string to postfix string.
 
 12. Write a c program which evaluates a postfix string.
 
@@ -30,10 +30,10 @@
 
 ## 16. Write a c program for implementing a Singly linked list and its operation.
 
-17. Write a c program for implementing a Doubly linked list and its operation.
+## 17. Write a c program for implementing a Doubly linked list and its operation.
 
 ## 18. Write a c program to insert an element into Sorted linked list.
 
-19. Write a c program for create a binary tree and its operation.
+## 19. Write a c program for create a binary tree and its operation.
 
 20. Write a c program for DFS and BFS technique.

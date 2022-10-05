@@ -278,7 +278,8 @@ FROM
 -- 23. List all orders with the names of their customer and salesman.
 SELECT
     onum,
-    sname cname,
+    sname,
+    cname,
 FROM
     orders
     INNER JOIN customer ON orders.cnum = customer.cnum
@@ -308,6 +309,7 @@ WHERE
     commission > 12;
 
 -- 26. Find all pairs of customers having the same rating without duplication.
+-- Pending
 SELECT
     c1.cname,
     c1.rating,
@@ -318,21 +320,128 @@ FROM
     customer c2
 WHERE
     c1.rating = c2.rating
-    AND c1.cnum != c2.cnum;
+    AND c1.cnum != c2.cnum
+    AND c2.cnum != c1.cnum;
 
 -- 27 List all customers located in cities where salesman Niraj has customers.
+select
+    c.cname,
+    c.city
+from
+    customer c
+where
+    c.snum = (
+        select
+            snum
+        from
+            salesman
+        where
+            sname like 'Niraj'
+    );
+
+-- 28. List all salesmen who are living in the same city without duplicate rows.
+SELECT
+    s1.sname,
+    s1.city,
+    s2.sname,
+    s2.city
+FROM
+    salesman s1,
+    salesman s2
+WHERE
+    s1.city = s2.city
+    AND s1.snum != s2.snum;
+
+-- 29. Produce the name and city of all the customers with the same rating as Hardik'.
 SELECT
     cname,
     city
 FROM
     customer
 WHERE
-    city IN (
+    rating = (
         SELECT
-            city
+            rating
         FROM
             customer
-            INNER JOIN salesman ON customer.snum = salesman.snum
         WHERE
-            sname = 'Niraj'
+            cname = 'Hardik'
+    );
+
+-- 30. Extract all orders of Miti.
+select
+    *
+from
+    orders
+where
+    snum = (
+        select
+            snum
+        from
+            salesman
+        where
+            sname = 'Miti'
+    );
+
+-- 31. Find all orders of the salesman who services 'Hardik'.
+SELECT
+    *
+FROM
+    orders
+WHERE
+    snum = (
+        SELECT
+            snum
+        FROM
+            customer
+        WHERE
+            cname = 'Hardik'
+    );
+
+-- 32. List all orders that are greater than the average of April 10, 1999.
+select
+    *
+from
+    orders
+where
+    ammount > (
+        select
+            avg(ammount)
+        from
+            orders
+        where
+            odate = '10-apr-99'
+        group by
+            odate
+    );
+
+-- 33. Count the no.of customers with the rating above than the average rating of 'Surat'.
+SELECT
+    COUNT(cnum)
+FROM
+    customer
+WHERE
+    rating > (
+        SELECT
+            AVG(rating)
+        FROM
+            customer
+        WHERE
+            city = 'Surat'
+    );
+
+-- 34. Using correlated sub query find the name and number of all customer with rating equal to Maximum for their city.
+SELECT
+    cname,
+    cnum
+FROM
+    customer
+WHERE
+    rating = (
+        SELECT
+            MAX(rating)
+        FROM
+            customer
+        WHERE
+            city = customer.city
     );

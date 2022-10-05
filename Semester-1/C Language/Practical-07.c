@@ -3,6 +3,7 @@ inches and Centimeter. */
 
 #include <stdio.h>
 #include <conio.h>
+
 void main()
 {
     float km, f, m, cm, i;
@@ -21,4 +22,6 @@ void main()
     printf("Feet : %.2f \n", f);
     printf("Inch :%.2f \n", i);
     printf("Centimeter= %.2f \n", cm);
+
+    getch();
 }
