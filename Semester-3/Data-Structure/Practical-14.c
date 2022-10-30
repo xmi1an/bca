@@ -183,12 +183,12 @@ void main()
         printf("\nEnter your choice : ");
         scanf("%d", &choice);
 
-        switch (1)
+        switch (choice)
         {
         case 1:
         {
             int value;
-            printf("\nEnter the value to be inserted at front : ");
+            printf("\nEnter the value to be inserted at ffront : ");
             scanf("%d", &value);
 
             insertFront(value);

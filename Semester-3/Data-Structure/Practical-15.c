@@ -64,8 +64,8 @@ void display()
             i = (i + 1) % SIZE;
         }
         printf("%d ", CQueue[i]);
-    }
-}
+    } // END OF ELSE
+} // END OF DISPLAY FUN.
 
 void main()
 {
@@ -85,7 +85,7 @@ void main()
         case 1:
 
             printf("Enter the element : ");
-            scanf("%d ", &x);
+            scanf("%d", &x);
             enQueue(x);
             break;
         case 2:

@@ -8,6 +8,7 @@ void swap(int *a, int *b)
     *a = *b;
     *b = t;
 }
+
 int partition(int a[], int s, int e)
 {
     int pivot = a[e];
@@ -24,6 +25,7 @@ int partition(int a[], int s, int e)
     swap(&a[e], &a[pIndex]);
     return pIndex;
 }
+
 void quickSort(int a[], int s, int e)
 {
     int p;
@@ -45,12 +47,12 @@ void main()
         printf("%d ", arr[i]);
         i++;
     }
-    printf("\n\n");
+    printf("\n");
 
     quickSort(arr, 0, 5);
     i = 0;
 
-    printf("\n\n\n\n");
+    printf("\n");
 
     while (i <= 5)
     {

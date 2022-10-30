@@ -25,7 +25,7 @@ void main()
 
     int item = 5, i;
 
-    clrscr();
+    // clrscr();
 
     for (i = 0; i < 5; i++)
     {
@@ -38,6 +38,7 @@ void main()
     {
         printf("\nItem Not Found..!\n");
     }
+
     else
     {
         printf("\nElement %d is found at %d position", item, result);

@@ -31,30 +31,30 @@ void append(int item)
     }
 }
 
-insert(int data)
+void insert(int data)
 {
-    struct node *temp;
+    struct node *travel;
 
-    struct node *newNode = (struct node *)malloc(sizeof(struct node));
-    newNode->data = data;
-    newNode->link = NULL;
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
+    temp->data = data;
+    temp->link = NULL;
 
     int key = data;
     if (head == NULL || key < head->data)
     {
-        newNode->link = head;
-        head = newNode;
+        temp->link = head;
+        head = temp;
     }
 
     else
     {
-        temp = head;
-        while (temp->link != NULL && temp->link->data < key)
+        travel = head;
+        while (travel->link != NULL && travel->link->data < key)
         {
-            temp = temp->link;
+            travel = travel->link;
         }
-        newNode->link = temp->link;
-        temp->link = newNode;
+        temp->link = travel->link;
+        travel->link = temp;
     }
 }
 
@@ -70,13 +70,18 @@ void display()
 
 int main()
 {
+
     append(10);
     append(20);
     append(30);
     append(50);
 
+    printf("Before Insertion : ");
+    display();
+
     insert(40);
 
+    printf("\nAfter Insertion : ");
     display();
     return 0;
 }

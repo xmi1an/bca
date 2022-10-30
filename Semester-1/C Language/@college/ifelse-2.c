@@ -4,7 +4,7 @@ void main()
 {
     int a = 10;
     int b = 20;
-    int c = 30;
+    int c = 20;
 
     if (a != b && a != c && b != c)
     {

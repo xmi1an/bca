@@ -3,22 +3,25 @@
 #include <stdio.h>
 #include <conio.h>
 
-int binarySearch(int array[], int x, int low, int high)
+int binarySearch(int array[], int x, int beg, int end)
 {
-    while (low <= high)
+    while (beg <= end)
     {
-        int mid = (high + low) / 2;
+        int mid = (beg + end) / 2;
 
         if (array[mid] == x)
+        {
             return mid;
+        }
 
         else if (array[mid] < x)
-            low = mid + 1;
+        {
+            beg = mid + 1;
+        }
 
         else
-            high = mid - 1;
+            end = mid - 1;
     }
-
     return -1;
 }
 
@@ -26,7 +29,7 @@ void main()
 {
     int array[10] = {4, 10, 16, 24, 32, 46, 76, 112, 144, 186};
 
-    int search = 6;
+    int search = 5;
 
     int result = binarySearch(array, search, 0, 9);
 

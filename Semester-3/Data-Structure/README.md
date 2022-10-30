@@ -14,7 +14,7 @@
 
 ## 8. Write a c program for sorting using merge sort method.
 
-9. Write a c program for sorting using radix sort method.
+## 9. Write a c program for sorting using radix sort method.
 
 ## 10. Write a c program for implementing of stack and its operation.
 

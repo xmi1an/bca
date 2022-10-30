@@ -1,10 +1,19 @@
 #include <stdio.h>
-int main()
+#include <conio.h>
+void main()
 {
-    float a = 1.2;
-    // int b  = a; //Compiler will throw an error for this
-    int b = (int)a + 1;
-    printf("Value of a is %f\n", a);
-    printf("Value of b is %d\n", b);
-    return 0;
+    int num1 = 10;
+    int num2 = 20;
+
+    if (num1 != num1)
+    {
+        printf("num1 is equal to num2");
+    }
+    else
+    {
+        printf("num1 is not equal to num2 ");
+    }
+
+    printf("Last Line");
+    getch();
 }

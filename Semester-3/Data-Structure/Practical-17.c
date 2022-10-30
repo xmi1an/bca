@@ -230,6 +230,7 @@ void deletion_specified()
     ptr = head;
     while (ptr->data != val)
         ptr = ptr->next;
+
     if (ptr->next == NULL)
     {
         printf("\nCan't delete\n");

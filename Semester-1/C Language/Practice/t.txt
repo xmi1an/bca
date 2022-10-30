@@ -1,0 +1,9 @@
+- Types of Sorting
+
+- Quick Sort
+
+- Shell Sort
+
+- Applications of Stacks-Recursion
+
+- Polish Expressions

@@ -523,7 +523,7 @@ VALUES
 
 -- 40. Insert a row in to customer table with values London, Pratik a 2008 for the columns city, Name and number.
 INSERT INTO
-    customer (city, cname, cnum)
+    customer
 VALUES
     ('London', 'Pratik', 2008);
 
@@ -625,10 +625,10 @@ ADD
 
 -- 50. Give the commands to create our sample tables (salesmen, customer, orders) with all the Necessary constraints like PRIMARY KEY, NOT NULL UNIQUE, FOREING KEY.
 CREATE TABLE salesman (
-    snum int,
-    sname varchar(20),
-    city varchar(20),
-    commission int,
+    snum int NOT NULL,
+    sname varchar(20) NOT NULL,
+    city varchar(20) NOT NULL,
+    commission int NOT NULL,
     PRIMARY KEY (snum)
 );
 
@@ -668,6 +668,7 @@ GROUP BY
 -- 54. Create a view that shows the average and total orders for each salesmen after his name And number.
 CREATE VIEW salesman_orders AS
 SELECT
+    sname,
     snum,
     AVG(ammount) as avg_order,
     SUM(ammount) as total_order
@@ -679,7 +680,7 @@ GROUP BY
 -- 55. Create a view Show name that shows for each order the order no, amount, salesman name And the customer name.
 CREATE VIEW order_details AS
 SELECT
-    o.onum,
+    o.order_no,
     o.ammount,
     s.sname,
     c.cname
