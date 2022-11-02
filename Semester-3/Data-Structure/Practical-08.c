@@ -1,53 +1,45 @@
 /* 8. Write a c program for sorting using merge sort method. */
 #include <stdio.h>
 
-/* Function to merge the subarrays of a[] */
+/* Function to merge the sutemparrays of a[] */
 
 void merge(int a[], int start, int mid, int end)
 {
     int i = start;
     int j = mid + 1;
-    int b[20];
     int k = start;
+    int temp[10];
 
     while (i <= mid && j <= end)
     {
         if (a[i] <= a[j])
         {
-            b[k] = a[i];
+            temp[k] = a[i];
             i++;
             k++;
         }
         else
         {
-            b[k] = a[j];
+            temp[k] = a[j];
             j++;
             k++;
         }
     }
-
-    if (i > mid)
+    while (i <= mid)
     {
-        while (j <= end)
-        {
-            b[k] = a[j];
-            j++;
-            k++;
-        }
+        temp[k] = a[i];
+        i++;
+        k++;
     }
-    else
+    while (j <= end)
     {
-        while (i <= mid)
-        {
-            b[k] = a[i];
-            i++;
-            k++;
-        }
+        temp[k] = a[j];
+        j++;
+        k++;
     }
-
-    for (k = start; k <= end; k++)
+    for (i = start; i <= end; i++)
     {
-        a[k] = b[k];
+        a[i] = temp[i];
     }
 }
 
@@ -75,7 +67,6 @@ void printArray(int a[], int n)
 
 int main()
 {
-
     int a[8] = {50, 10, 70, 60, 80, 40, 30, 20};
 
     int n = sizeof(a) / sizeof(a[0]);

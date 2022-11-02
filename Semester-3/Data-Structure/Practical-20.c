@@ -12,55 +12,64 @@ struct node
 
 struct node *create()
 {
-    struct node *temp;
-    int data, choice;
-
-    temp = (struct node *)malloc(sizeof(struct node));
-
-    printf("1. New node.\n");
-    printf("0. Exit. \n");
-    printf("Enter your choice : ");
-    scanf("%d", &choice);
-
-    switch (choice)
+    struct node *p;
+    int x;
+    printf("Enter -1 for no node : ");
+    scanf("%d", &x);
+    if (x == -1)
     {
-    case 1:
-        printf("Enter the data:");
-        scanf("%d", &data);
-        temp->data = data;
-
-        printf("Enter the left child of %d : \n", data);
-        temp->left = create();
-
-        printf("Enter the right child of %d \n", data);
-        temp->right = create();
-
-        return temp;
-
-        break;
-    case 0:
         return NULL;
-        break;
+    }
+    p = (struct node *)malloc(sizeof(struct node));
+    p->data = x;
+    printf("Enter left child of %d: ", x);
+    p->left = create();
+    printf("Enter right child of %d: ", x);
+    p->right = create();
+    return p;
+}
 
-    default:
-        break;
+void preorder(struct node *t)
+{
+    if (t != NULL)
+    {
+        printf("%d ", t->data);
+        preorder(t->left);
+        preorder(t->right);
     }
 }
 
-void preorder(struct node *root)
+void inorder(struct node *t)
 {
-    if (root == NULL)
-        return;
-    printf("%d ", root->data);
-    preorder(root->left);
-    preorder(root->right);
+    if (t != NULL)
+    {
+        inorder(t->left);
+        printf("%d ", t->data);
+        inorder(t->right);
+    }
 }
 
-void main()
+void postorder(struct node *t)
+{
+    if (t != NULL)
+    {
+        postorder(t->left);
+        postorder(t->right);
+        printf("%d ", t->data);
+    }
+}
+
+int main()
 {
     struct node *root;
     root = create();
-    printf("Inorder traversal of the tree is : \n");
-
+    printf("Preorder traversal: ");
     preorder(root);
+    printf("\n");
+    printf("Inorder traversal: ");
+    inorder(root);
+    printf("\n");
+    printf("Postorder traversal: ");
+    postorder(root);
+    return 0;
 }
