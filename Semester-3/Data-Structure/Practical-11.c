@@ -4,7 +4,7 @@
 #include <string.h>
 #include <ctype.h>
 
-char stack[20];
+char stack[100];
 int top = -1;
 
 void push(char x)

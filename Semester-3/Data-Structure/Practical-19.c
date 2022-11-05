@@ -1,5 +1,7 @@
 /* 19. Write a c program for create a binary tree and its operation. */
 
+// Data Structure All Practicals Completed.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -43,13 +45,9 @@ int main()
 {
     struct node *root;
     root = create();
-    printf("Preorder traversal: ");
-    preorder(root);
-    printf("\n");
+
     printf("Inorder traversal: ");
     inorder(root);
-    printf("\n");
-    printf("Postorder traversal: ");
-    postorder(root);
+
     return 0;
 }

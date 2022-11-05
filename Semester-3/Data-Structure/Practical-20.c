@@ -1,4 +1,4 @@
-/* 19. Write a c program for create a binary tree and its operation. */
+/* 20. Write a c program for DFS and BFS technique. */
 
 #include <stdio.h>
 #include <stdlib.h>

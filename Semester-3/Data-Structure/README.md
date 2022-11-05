@@ -20,7 +20,7 @@
 
 ## 11. Write a c program which convert infix string to postfix string.
 
-12. Write a c program which evaluates a postfix string.
+## 12. Write a c program which evaluates a postfix string.
 
 ## 13. Write a c program for implementing a simple queue and its operation.
 
@@ -36,4 +36,4 @@
 
 ## 19. Write a c program for create a binary tree and its operation.
 
-20. Write a c program for DFS and BFS technique.
+## 20. Write a c program for DFS and BFS technique.
