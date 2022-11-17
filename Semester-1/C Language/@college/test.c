@@ -1,15 +1,14 @@
-// C program to implement
-// the above approach
 #include <stdio.h>
-
-// Driver code
-int main()
+#include <conio.h>
+void main()
 {
-    char ch;
+    int a = 6;
+    int b = 12;
+    int c = 10;
+    int d = 0;
+    int ans;
 
-    // Read a char type variable,
-    // store in "ch"
-    scanf("%c", &ch);
-    printf("Output : %c", ch);
-    return 0;
+    ans = (a + b - c) * d;
+
+    printf("%d", ans);
 }

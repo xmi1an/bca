@@ -1,17 +1,9 @@
-
-
-if ( condition1 )
+#include <stdio.h>
+int main()
 {
-  // block of code to be executed if condition1 is true
-} 
-else if ( condition2 )
-{
-  /* block of code to be executed if the condition1 is false
-     and condition2 is true */
+  float f = 0.1;
+  if (f == 0.1)
+    printf("True");
+  else
+    printf("False");
 }
-else
-{
-  /* block of code to be executed if the condition1 is false
-     and condition2 is false */
-}
-
