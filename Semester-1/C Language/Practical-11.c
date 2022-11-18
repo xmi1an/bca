@@ -8,7 +8,9 @@
 void main()
 {
     int days, year, mon, rd;
+
     clrscr();
+
     printf("Enter Days:");
     scanf("%d", &days);
 
