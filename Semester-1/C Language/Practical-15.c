@@ -1,5 +1,5 @@
 /*
-15. Write a C program to Checked whether entered char is capital, small, digit or any special Character.that the enter number is Negative, or Positive or Zero.
+15. Write a C program to Checked whether entered char is capital, small, digit or any special Character.
 */
 
 #include <stdio.h>
@@ -10,7 +10,7 @@ void main()
     printf("Enter a character: ");
     scanf("%c", &ch);
 
-    if (ch >= 'A' && ch <= 'Z') //
+    if (ch >= 'A' && ch <= 'Z')
     {
         printf("%c is a capital letter.", ch);
     }

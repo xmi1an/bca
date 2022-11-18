@@ -1,14 +1,24 @@
 #include <stdio.h>
-#include <conio.h>
+
 void main()
 {
-    int a = 6;
-    int b = 12;
-    int c = 10;
-    int d = 0;
-    int ans;
+    char ch = '+';
 
-    ans = (a + b - c) * d;
+    if (ch >= 'a' && ch <= 'z')
+    {
+        printf("Character is a Small Letter.");
+    }
+    else if (ch >= 'A' && ch <= 'Z')
+    {
+        printf("Character is Upper Letter");
+    }
 
-    printf("%d", ans);
+    else if (ch >= '0' && ch <= '9')
+    {
+        printf("Character is a Digit.");
+    }
+    else
+    {
+        printf("Character is a Special Letter.");
+    }
 }
