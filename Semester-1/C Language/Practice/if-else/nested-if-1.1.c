@@ -6,7 +6,7 @@ void main()
 
     if (i == 10)
     {
-        if (i < 9)
+        if (i < 15)
         {
             printf("i is smaller than 15\n");
         }

@@ -11,7 +11,6 @@ void main()
 
     if (a == b)
     {
-
         if (a == c)
         {
             printf("Yes");
