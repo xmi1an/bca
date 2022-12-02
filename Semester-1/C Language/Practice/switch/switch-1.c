@@ -7,7 +7,7 @@ void main()
     {
     case 1:
         printf("Sunday");
-
+        break;
     case 2:
         printf("Monday");
         break;

@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-int main()
+void main()
 {
     int num;
     printf("Enter a number: ");

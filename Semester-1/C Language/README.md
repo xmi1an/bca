@@ -18,7 +18,7 @@
 
 ## 10. Write a C program for summation, subtraction, multiplication, division of two number using Arithmetic operator.
 
-## 11. Write a C program to enter days and convert into years, month and reminder days.
+11. Write a C program to enter days and convert into years, month and reminder days.
 
 ## 12. Write a C program to find out the largest value from given three numbers using conditional Operator.
 
@@ -30,70 +30,70 @@
 
 ## 16. Write a C program to read number 1 to 7 and print relatively day Sunday to Saturday.
 
-## 17. Write a C program to find out the max. and min. number from given 10 numbers.
+17. Write a C program to find out the max. and min. number from given 10 numbers.
 
-## 18. Write a C program to find the sum of digit of accepted number.
+18. Write a C program to find the sum of digit of accepted number.
 
-## 19. Write a C program to find the sum of first 100 odd numbers. And even numbers.
+19. Write a C program to find the sum of first 100 odd numbers and even numbers.
 
 ## 20. Write a C program to display first 25 Fibonacci nos.
 
-## 21. Write a C program to check the accepted number is prime number or not.
+21. Write a C program to check the accepted number is prime number or not.
 
-## 22. Write a C program to display first' 100 prime numbers.
+22. Write a C program to display first' 100 prime numbers.
 
-## 23. Write a C program to find factorial of accepted numbers.
+23. Write a C program to find factorial of accepted numbers.
 
-## 24. Write a C program to print accepted no and its reverse number.
+24. Write a C program to print accepted no and its reverse number.
 
-## 25. Write a C program to find whether the accepted number is palindrome or not.
+25. Write a C program to find whether the accepted number is palindrome or not.
 
-## 26. Write a C program to convert decimal numbers into equivalent binary number.
+26. Write a C program to convert decimal numbers into equivalent binary number.
 
-## 27. Write a C program to convert decimal numbers into equivalent to octal number.
+27. Write a C program to convert decimal numbers into equivalent to octal number.
 
-## 28. Write a C program to convert decimal numbers into equivalent hexadecimal numbar.
+28. Write a C program to convert decimal numbers into equivalent hexadecimal numbar.
 
-## 29. Write a C program to display first 5 Armstrong number.
+29. Write a C program to display first 5 Armstrong number.
 
-## 30. Write a C program to arrange the accepted numbers in ascending order and descending order.
+30. Write a C program to arrange the accepted numbers in ascending order and descending order.
 
-## 31. Write a C program to find whether the accepted string is palindrome or not.
+31. Write a C program to find whether the accepted string is palindrome or not.
 
-## 32. Write a C program to convert given line into upper case or lower case.
+32. Write a C program to convert given line into upper case or lower case.
 
-## 33. Write a C program to count no of word, character, line and space from given text.
+33. Write a C program to count no of word, character, line and space from given text.
 
-## 34. Write a C program to sort given string in ascending order.
+34. Write a C program to sort given string in ascending order.
 
-## 35. Write a C program to prepare pay slip using following data. Da = 10% of basic, Hra = 7.50% of basic, Ma = 300, Pf = 12.50% of basic, Gross = basic + Da + Hra + Ma, Nt = Gross – Pf.
+35. Write a C program to prepare pay slip using following data. Da = 10% of basic, Hra = 7.50% of basic, Ma = 300, Pf = 12.50% of basic, Gross = basic + Da + Hra + Ma, Nt = Gross – Pf.
 
-## 36. Write a C program to read marks and your program will display grade.
+36. Write a C program to read marks and your program will display grade.
 
-    Marks   Grade
+    Marks Grade
     100– 80 Dist
-    60– 79  First
-    50– 59  Second
-    35– 49  Pass
-    0– 34   Fail
+    60– 79 First
+    50– 59 Second
+    35– 49 Pass
+    0– 34 Fail
 
-## 37. Write a C program to find 1+1 / 2+1 / 3+1 / 4+....+1 / n.
+37. Write a C program to find 1+1 / 2+1 / 3+1 / 4+....+1 / n.
 
-## 38. Write a C program to display following output on the screen.
+38. Write a C program to display following output on the screen.
 
     1
     12
     123
     1234
 
-## 39. Write a C program to display following output on the screen.
+39. Write a C program to display following output on the screen.
 
     1
     22
     333
     4444
 
-## 40. Write a C program to display following output on the screen.
+40. Write a C program to display following output on the screen.
 
     0
     1 1
@@ -101,7 +101,7 @@
     0 1 0 1
     1 0 1 0 1
 
-## 41. Write a C program to display following output on the screen.
+41. Write a C program to display following output on the screen.
 
     2
     3 2
