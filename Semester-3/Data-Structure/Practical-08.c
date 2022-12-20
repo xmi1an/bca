@@ -1,18 +1,18 @@
-/* 8. Write a c program for sorting using merge sort method. */
 #include <stdio.h>
+#include <conio.h>
 
-/* Function to merge the sutemparrays of a[] */
+/* Function to merge the subarrays of a[] */
 
 void merge(int a[], int start, int mid, int end)
 {
-    int i = start;
-    int j = mid + 1;
-    int k = start;
-    int temp[10];
+    int i = start;   // Starting index of first subarray
+    int j = mid + 1; // Starting index of second subarray
+    int k = start;   // Starting index of merged subarray
+    int temp[10];    // Temporary array to store the merged subarray
 
-    while (i <= mid && j <= end)
+    while (i <= mid && j <= end) // Traverse both the subarrays and in each iteration add smaller of both elements in temp
     {
-        if (a[i] <= a[j])
+        if (a[i] <= a[j]) //
         {
             temp[k] = a[i];
             i++;
@@ -25,34 +25,34 @@ void merge(int a[], int start, int mid, int end)
             k++;
         }
     }
-    while (i <= mid)
+    
+    while (i <= mid) // Add remaining elements of first subarray in temp.
     {
         temp[k] = a[i];
         i++;
         k++;
     }
-    while (j <= end)
+    while (j <= end) // Add remaining elements of second subarray in temp.
     {
         temp[k] = a[j];
         j++;
         k++;
     }
-    for (i = start; i <= end; i++)
+    for (i = start; i <= end; i++) // Copy the merged subarray into original array.
     {
         a[i] = temp[i];
     }
 }
-
 void divide(int a[], int start, int end)
 {
-    if (start < end)
+    if (start < end) // if there is more than one element.
     {
-        int mid = (start + end) / 2;
+        int mid = (start + end) / 2; // find the mid index.
 
-        divide(a, start, mid);
-        divide(a, mid + 1, end);
+        divide(a, start, mid);   // divide the array into two halves.
+        divide(a, mid + 1, end); // divide the array into two halves.
 
-        merge(a, start, mid, end);
+        merge(a, start, mid, end); // merge the two halves.
     }
 }
 
@@ -67,6 +67,7 @@ void printArray(int a[], int n)
 
 int main()
 {
+
     int a[8] = {50, 10, 70, 60, 80, 40, 30, 20};
 
     int n = sizeof(a) / sizeof(a[0]);

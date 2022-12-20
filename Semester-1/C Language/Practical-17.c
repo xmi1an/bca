@@ -17,11 +17,11 @@ void main()
         }
         else
         {
-            if (max < n)
+            if (n > max)
             {
                 max = n;
             }
-            if (min > n)
+            if (n < min)
             {
                 min = n;
             }

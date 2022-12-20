@@ -1,22 +1,25 @@
 /* 21. Write a C program to check the accepted number is prime number or not. */
 
 #include <stdio.h>
-#include <conio.h>
 void main()
 {
-    int no, i;
+    int n, i, m = 0, flag = 0;
 
-    printf("Enter number:");
-    scanf("%d", &no);
+    printf("Enter the number : ");
+    scanf("%d", &n);
 
-    for (i = 2; i <= no; i++)
+    m = n / 2;
+
+    for (i = 2; i <= m; i++)
     {
-        if (no % i == 0)
+        if (n % i == 0)
+        {
+            printf("This Number is not prime");
+            flag = 1;
             break;
+        }
     }
 
-    if (i == no)
-        printf("this number is prime \n");
-    else
-        printf("this number is not prime \n");
+    if (flag == 0)
+        printf("This Number is prime");
 }

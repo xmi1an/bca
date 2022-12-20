@@ -30,29 +30,29 @@
 
 ## 16. Write a C program to read number 1 to 7 and print relatively day Sunday to Saturday.
 
-17. Write a C program to find out the max. and min. number from given 10 numbers.
+## 17. Write a C program to find out the max. and min. number from given 10 numbers.
 
-18. Write a C program to find the sum of digit of accepted number.
+## 18. Write a C program to find the sum of digit of accepted number.
 
-19. Write a C program to find the sum of first 100 odd numbers and even numbers.
+## 19. Write a C program to find the sum of first 100 odd numbers and even numbers.
 
 ## 20. Write a C program to display first 25 Fibonacci nos.
 
-21. Write a C program to check the accepted number is prime number or not.
+## 21. Write a C program to check the accepted number is prime number or not.
 
-22. Write a C program to display first' 100 prime numbers.
+## 22. Write a C program to display first' 100 prime numbers.
 
-23. Write a C program to find factorial of accepted numbers.
+## 23. Write a C program to find factorial of accepted numbers.
 
-24. Write a C program to print accepted no and its reverse number.
+## 24. Write a C program to print accepted no and its reverse number.
 
-25. Write a C program to find whether the accepted number is palindrome or not.
+## 25. Write a C program to find whether the accepted number is palindrome or not.
 
 26. Write a C program to convert decimal numbers into equivalent binary number.
 
 27. Write a C program to convert decimal numbers into equivalent to octal number.
 
-28. Write a C program to convert decimal numbers into equivalent hexadecimal numbar.
+28. Write a C program to convert decimal numbers into equivalent hexadecimal number.
 
 29. Write a C program to display first 5 Armstrong number.
 

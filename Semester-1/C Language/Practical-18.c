@@ -4,15 +4,20 @@
 
 void main()
 {
-    int num = 134;
+    int num;
     int sum = 0;
+    int digit;
+    int temp;
+    printf("Enter Number : ");
+    scanf("%d", &num);
+    temp = num;
 
     while (num > 0)
     {
-        int digit = num % 10;
+        digit = num % 10;
         sum = sum + digit;
         num = num / 10;
     }
 
-    printf("Sum of digits is %d", sum);
+    printf("Sum of digits %d is %d ", temp, sum);
 }
