@@ -54,7 +54,7 @@
 
 28. Write a C program to convert decimal numbers into equivalent hexadecimal number.
 
-29. Write a C program to display first 5 Armstrong number.
+## 29. Write a C program to display first 5 Armstrong number.
 
 30. Write a C program to arrange the accepted numbers in ascending order and descending order.
 
@@ -109,59 +109,69 @@
     4 4 4 4
     5 5 5 5 5
 
-## 42. Write a C program to display following output on the screen.
+42. Write a C program to display following output on the screen.
 
     1
     2 3
     4 5 6
     7 8 9 10
 
-## 43. Write a C program to display following output on the screen
+43. Write a C program to display following output on the screen
 
+```
     *
     * *
     * * *
     * * * *
     * * * * *
+```
 
-## 44. Write a C program to display following output on the screen.
+44. Write a C program to display following output on the screen.
 
-        *
-       * *
-      * * *
-     * * * *
+```
+    *
+    * *
+    * * *
+    * * * *
     * * * * *
+```
 
-## 45. Write a C program to display following output on the screen.
+45. Write a C program to display following output on the screen.
 
-    1
-    2 3
-    4 5 6
-    7 8 9 10
-    11 12 13 14 15
+```
+         1
+        2 3
+       4 5 6
+     7 8 9 10
+   11 12 1314 15
+```
 
-## 46. Write a C program to display following output on the screen
+46. Write a C program to display following output on the screen
 
-    C
-    CP
-    CPR
-    CPRO
-    . . .
-    CPROGRAMMING
-    . . .
-    CPRO
-    CPR
-    CP
-    C
+C
+CP
+CPR
+CPRO
+. . .
+CPROGRAMMING
+. . .
+CPRO
+CPR
+CP
+C
 
-## 47. Write a C program to find maximum & minimum value from the given array.
+47. Write a C program to find maximum & minimum value from the given array.
 
-## 48. Write a C program to find next minimum from the given array.
+48. Write a C program to find next minimum from the given array.
 
-## 49. Write a c program to input N and find out the sum, average, max, min, total even no and total odd no. [with out use of array]
+49. Write a c program to input N and find out the sum, average, max, min, total even no and total odd no. [with out use of array]
 
-## 50. Write a c program to input N no and find out the sum, average, max, min, total even no and total odd no. [using array]
+50. Write a c program to input N no and find out the sum, average, max, min, total even no and total odd no. [using array]
 
-## 51. Write a c program to display the two matrix on screen and perform the addition of two matrix and print on screen.
+51. Write a c program to display the two matrix on screen and perform the addition of two matrix and print on screen.
 
-## 52. Write a c program to display the two matrix on screen and perform the multiplication of two matrix and print on screen.
+52. Write a c program to display the two matrix on screen and perform the multiplication of two matrix and print on screen.
+
+```
+
+```
