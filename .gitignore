@@ -7,6 +7,7 @@ CMakeLists.txt
 *.exe
 
 # Sem 1
+C Language
 todo
 alpha
 # Sem 3
@@ -15,4 +16,3 @@ build
 TestHere
 @collage
 mcq
-C Language
