@@ -1,1 +1,1 @@
-## HNGU BCA Practicals
+## Materials of BCA as per HNGU Syllabus.
