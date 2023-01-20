@@ -1,0 +1,26 @@
+on:
+  pull_request:
+    types: [opened, closed]
+
+jobs:
+  add-contributors:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repository
+      run: git checkout main
+
+    - name: Get the list of contributors
+      run: |
+        git log --format='%aN' | sort -u > contributors.txt
+
+    - name: Add contributors to README
+      run: |
+        echo "## Contributors" >> README.md
+        echo "" >> README2.md
+        cat contributors.txt | awk '{print "- "$0}' >> README2.md
+        
+        git config --global user.email "jadavmilan009@gmail.com"
+        git config --global user.name "GitHub Action"
+        git add README.md
+        git commit -m "Update contributors"
+        git push origin main
