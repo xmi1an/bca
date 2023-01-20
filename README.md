@@ -9,3 +9,18 @@ Thank you for your time, effort, and expertise. Your contributions have made a s
 
 Sincerely,<br>
 Milan Jadav
+<table>
+   <thead>
+      <tr>
+         <th>Contributor Name</th>
+         <th>Role</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>Kartvya Solanki</td>
+         <td>BCA Student</td>
+      </tr>
+     
+   </tbody>
+</table>
