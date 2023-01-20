@@ -6,9 +6,8 @@
 void main()
 {
     float pi = 3.14;
-    int r;
     float area;
-
+    int r;
     printf("\n");
 
     printf("Enter the value of r : ");
@@ -16,7 +15,7 @@ void main()
 
     area = pi * r * r;
 
-    printf("Area : %.1f", area);
+    printf("Area : %.2f", area);
 
     getch();
 }

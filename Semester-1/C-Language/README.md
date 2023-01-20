@@ -48,11 +48,11 @@
 
 ## 25. Write a C program to find whether the accepted number is palindrome or not.
 
-26. Write a C program to convert decimal numbers into equivalent binary number.
+## 26. Write a C program to convert decimal numbers into equivalent binary number.
 
-27. Write a C program to convert decimal numbers into equivalent to octal number.
+## 27. Write a C program to convert decimal numbers into equivalent to octal number.
 
-28. Write a C program to convert decimal numbers into equivalent hexadecimal number.
+## 28. Write a C program to convert decimal numbers into equivalent hexadecimal number.
 
 ## 29. Write a C program to display first 5 Armstrong number.
 
@@ -62,9 +62,9 @@
 
 ## 32. Write a C program to convert given line into upper case or lower case.
 
-33. Write a C program to count no of word, character, line and space from given text.
+## 33. Write a C program to count no of word, character, line and space from given text.
 
-34. Write a C program to sort given string in ascending order.
+## 34. Write a C program to sort given string in ascending order.
 
 ## 35. Write a C program to prepare pay slip using following data. Da = 10% of basic, Hra = 7.50% of basic, Ma = 300, Pf = 12.50% of basic, Gross = basic + Da + Hra + Ma, Nt = Gross – Pf.
 
@@ -95,7 +95,7 @@
     4444
 ```
 
-40. Write a C program to display following output on the screen.
+## 40. Write a C program to display following output on the screen.
 
 ```
    0
@@ -154,7 +154,7 @@
    11 12 1314 15
 ```
 
-46. Write a C program to display following output on the screen
+## 46. Write a C program to display following output on the screen
 
 C
 CP
@@ -168,13 +168,13 @@ CPR
 CP
 C
 
-47. Write a C program to find maximum & minimum value from the given array.
+## 47. Write a C program to find maximum & minimum value from the given array.
 
-48. Write a C program to find next minimum from the given array.
+## 48. Write a C program to find next minimum from the given array.
 
-49. Write a c program to input N and find out the sum, average, max, min, total even no and total odd no. [with out use of array]
+## 49. Write a c program to input N and find out the sum, average, max, min, total even no and total odd no. [without use of array].
 
-50. Write a c program to input N no and find out the sum, average, max, min, total even no and total odd no. [using array]
+## 50. Write a c program to input N no and find out the sum, average, max, min, total even no and total odd no. [using array]
 
 51. Write a c program to display the two matrix on screen and perform the addition of two matrix and print on screen.
 

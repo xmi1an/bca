@@ -16,18 +16,18 @@ int main()
 {
     int i, j;
     char s[] = "CPROGRAMMING";
-    // prints upper half diamond
+    // prints upper half.
     for (i = 0; i <= 11; i++)
     {
         for (j = 0; j <= i; j++)
         {
-            // printf("* ");
             printf("%c", s[j]);
         }
         printf("\n");
     }
-    // prints lower-half diamond
-    for (i = 11 - 1; i >= 0; i--)
+
+    // prints lower-half
+    for (i = 10; i >= 0; i--)
     {
         for (j = 0; j <= i; j++)
         {

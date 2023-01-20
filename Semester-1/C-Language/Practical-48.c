@@ -11,7 +11,6 @@ void main()
         printf("Enter Element :");
         scanf("%d", &a[i]);
     }
-
     max = a[0];
     min = a[0];
 
@@ -31,13 +30,15 @@ void main()
     printf("Min : %d\n", min);
 
     nm = max;
-
+    
     for (i = 0; i < 5; i++)
     {
-        if (a[i] > min && a[i] < nm)
+        if (a[i] < nm && a[i] > min)
         {
             nm = a[i];
         }
+        
     }
-    printf("Next Min=%d\n", nm);
+
+    printf("Next Min : %d\n", nm);
 }

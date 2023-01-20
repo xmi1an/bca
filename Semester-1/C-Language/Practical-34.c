@@ -1,29 +1,28 @@
 /* 34. Write a C program to sort given string in ascending order. */
-
 #include <stdio.h>
-#include <conio.h>
+#include <string.h>
+
 void main()
 {
-    char str[30], ch;
-    int i, j;
-    // clrscr();
-    // abcde
+    // The string to be sorted
+    char str[] = "dbcea";
+    int i,j;
+    // Get the length of the string
+    int n = strlen(str);
 
-    // printf("Enter String:");
-    gets(str);
-
-    for (i = 0; str[i] != '\0'; i++)
+    // Sort the string using bubble sort
+    for (i = 0; i < n - 1; i++)
     {
-        for (j = 0; str[j] != '\0'; j++)
+        for (j = 0; j < n - 1- i; j++)
         {
-            if (str[i] < str[j])
+            if (str[j] > str[j + 1])
             {
-                ch = str[i];
-                str[i] = str[j];
-                str[j] = ch;
+                char temp = str[j];
+                str[j] = str[j + 1];
+                str[j + 1] = temp;
             }
         }
     }
-
-    printf("\n\nAfter sorting String is: %s", str);
+    // Print the sorted string
+    printf("Sorted string: %s\n", str);
 }

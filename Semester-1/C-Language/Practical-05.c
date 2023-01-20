@@ -1,6 +1,5 @@
 /*
-5. Write a C program to find the area and volume of sphere. Formulas are Area =
-4*PI*R*R Volume = 4/3*PI*R*R*R.
+5. Write a C program to find the area and volume of sphere. Formulas are Area = 4*PI*R*R Volume = 4/3*PI*R*R*R.
 */
 
 #include <stdio.h>

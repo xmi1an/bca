@@ -1,56 +1,60 @@
-/* 51. Write a c program to display the two matrix on screen and perform the addition of two matrix and print on screen. */
+/* 51. Write a c program to display the two Matrix on screen and perform the addition of two Matrix and print on screen. */
 
 #include <stdio.h>
 #include <conio.h>
 void main()
 {
-    int a[3][3], b[3][3], d[3][3], r, c;
+    int a[2][2], b[2][2], d[2][2], i, j;
 
-    for (r = 0; r < 3; r++)
+    // Input Matrix A
+    for (i = 0; i < 2; i++)
     {
-        for (c = 0; c < 3; c++)
+        for (j = 0; j < 2; j++)
         {
             printf("Enter Value for Matrix A : ");
-            scanf("%d", &a[r][c]);
+            scanf("%d", &a[i][j]);
         }
     }
-
-    for (r = 0; r < 3; r++)
+    // Input Matrix B
+    for (i = 0; i < 2; i++)
     {
-        for (c = 0; c < 3; c++)
+        for (j = 0; j < 2; j++)
         {
             printf("Enter Value for Matrix B : ");
-            scanf("%d", &b[r][c]);
+            scanf("%d", &b[i][j]);
         }
     }
 
-    printf("\n\n\n MATRIX A \n");
-    for (r = 0; r < 3; r++)
+    // Display Matrix A
+    printf("\n\n\n Matrix A \n");
+    for (i = 0; i < 2; i++)
     {
-        for (c = 0; c < 3; c++)
+        for (j = 0; j < 2; j++)
         {
-            printf("%3d", a[r][c]);
-        }
-        printf("\n");
-    }
-
-    printf("\n\n\n MATRIX B \n");
-    for (r = 0; r < 3; r++)
-    {
-        for (c = 0; c < 3; c++)
-        {
-            printf("%3d ", b[r][c]);
+            printf("%3d", a[i][j]);
         }
         printf("\n");
     }
 
-    printf("\n\n ADDISION OF TWO MATRIX \n");
-    for (r = 0; r < 3; r++)
+    // Display Matrix B
+    printf("\n\n\n Matrix B \n");
+    for (i = 0; i < 2; i++)
     {
-        for (c = 0; c < 3; c++)
+        for (j = 0; j < 2; j++)
         {
-            d[r][c] = a[r][c] + b[r][c];
-            printf("%d ", d[r][c]);
+            printf("%3d ", b[i][j]);
+        }
+        printf("\n");
+    }
+
+    // Addition of Two Matrix
+    printf("\n\n Addition Of Two Matrix \n");
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 2; j++)
+        {
+            d[i][j] = a[i][j] + b[i][j];
+            printf("%d ", d[i][j]);
         }
         printf("\n");
     }

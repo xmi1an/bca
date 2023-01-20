@@ -1,8 +1,8 @@
-/* program for convert given line into uppercase or lowercase. */
+/* 32. program for convert given line into uppercase or lowercase. */
 
 #include <stdio.h>
 #include <conio.h>
-#include <string.h>
+#include <ctype.h>
 
 void main()
 {
@@ -13,7 +13,6 @@ void main()
 
     gets(str);
 
-    printf("\n====Menu====");
     printf("\nPress U for upper case");
     printf("\nPress L for lower case");
     printf("\n Enter your choice : ");

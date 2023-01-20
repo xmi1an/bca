@@ -1,12 +1,11 @@
-/* 12. Write a C program to find out the largest value from given three numbers using
-conditional Operator  */
+/* 12. Write a C program to find out the largest value from given three numbers using conditional Operator  */
 
 #include <stdio.h>
 #include <conio.h>
 
 void main()
 {
-    int n1 = 10, n2 = 25, n3 = 30;
+    int n1, n2, n3;
     // clrscr();
 
     printf("\n Enter n1 : ");

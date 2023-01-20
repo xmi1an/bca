@@ -6,6 +6,7 @@ Pf = 12.50% of basic,
 Gross = basic + Da + Hra + Ma,
 Nt = Gross – Pf.
 */
+
 #include <stdio.h>
 #include <conio.h>
 void main()

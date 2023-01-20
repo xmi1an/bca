@@ -1,43 +1,50 @@
-/* 50. Write a c program to input N no and find out the sum, average, max, min, total even no and total odd no. [using array] */
+/* 50. Write a c program totalodd input N no and find out the sum, average, max, min, total even no and total odd no. [using array] */
 
 #include <stdio.h>
 #include <conio.h>
+
 void main()
 {
-    int n, i, t[20], s = 0, mx = -32768, mn = 32767, to = 0, te = 0;
-    float a;
-    printf("How many nos. you have to entered=");
+    int n, i, num[20], sum = 0, max = 0, min = 0, totalodd = 0, totaleven = 0;
+    float avg;
+
+    printf("How many numbers you have to entered : ");
     scanf("%d", &n);
 
     for (i = 0; i < n; i++)
     {
-        printf("Enter No=");
-        scanf("%d", &t[i]);
-        s = s + t[i];
-        if (t[i] > mx)
+        printf("Enter No : ");
+        scanf("%d", &num[i]);
+        sum = sum + num[i];
+        if (i == 0)
         {
-            mx = t[i];
+            max = num[0];
+            min = num[0];
         }
-        if (t[i] < mn)
+        if (num[i] > max)
         {
-            mn = t[i];
+            max = num[i];
         }
-        if (t[i] % 2 == 0)
+        if (num[i] < min)
         {
-            te = te + t[i];
+            min = num[i];
+        }
+        if (num[i] % 2 == 0)
+        {
+            totaleven = totaleven + num[i];
         }
         else
         {
-            to = to + t[i];
+            totalodd = totalodd + num[i];
         }
     }
 
-    a = s / (float)n;
+    avg = sum / (float)n;
 
-    printf("Sum=%d\n", s);
-    printf("Avg=%f\n", a);
-    printf("Max=%d\n", mx);
-    printf("Min=%d\n", mn);
-    printf("Sum of Odd No=%d\n", to);
-    printf("Sum of Even No=%d\n", te);
+    printf("Sum : %d\n", sum);
+    printf("Avg : %f\n", avg);
+    printf("Max : %d\n", max);
+    printf("Min : %d\n", min);
+    printf("Sum of Odd No : %d\n", totalodd);
+    printf("Sum of Even No : %d\n", totaleven);
 }

@@ -23,6 +23,7 @@ void main()
             scanf("%d", &b[r][c]);
         }
     }
+
     printf("\nMatrix Multiplication : \n");
     for (r = 0; r < 2; r++)
     {
@@ -35,6 +36,7 @@ void main()
             }
         }
     }
+
     printf("\nMatrix A : \n");
     for (r = 0; r < 2; r++)
     {

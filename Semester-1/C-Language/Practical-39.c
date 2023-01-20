@@ -10,18 +10,16 @@
 #include <conio.h>
 void main()
 {
-    int n, r, c;
-    clrscr();
-    printf("Enter No=");
+    int i, j, n;
+    // clrscr();
+    printf("Enter Rows : ");
     scanf("%d", &n);
-    for (r = 1; r <= n; r++)
+
+    for (i = 1; i <= n; i++)
     {
-        for (c = 1; c <= n; c++)
+        for (j = 1; j <= i; j++)
         {
-            if (c <= r)
-            {
-                printf("%d", r);
-            }
+            printf("%d", i);
         }
         printf("\n");
     }

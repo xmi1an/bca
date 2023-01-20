@@ -1,7 +1,6 @@
 /*
 47. Write a C program to find maximum & minimum value from the given array.
  */
-
 #include <stdio.h>
 #include <conio.h>
 void main()
@@ -13,7 +12,6 @@ void main()
         printf("Enter Element : ");
         scanf("%d", &a[i]);
     }
-
     max = a[0];
     min = a[0];
     for (i = 1; i < 5; i++)

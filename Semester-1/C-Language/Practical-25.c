@@ -3,7 +3,7 @@
 #include <conio.h>
 void main()
 {
-    int temp, n, digit, rev = 0;
+    int temp, n, rem, rev = 0;
     // clrscr();
     printf("Enter No : ");
     scanf("%d", &n);
@@ -12,8 +12,8 @@ void main()
 
     while (n != 0)
     {
-        digit = n % 10;
-        rev = rev * 10 + digit;
+        rem = n % 10;
+        rev = rev * 10 + rem;
         n = n / 10;
     }
 

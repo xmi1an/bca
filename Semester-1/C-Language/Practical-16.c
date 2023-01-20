@@ -1,11 +1,12 @@
 /* 16. Write a C program to read number 1 to 7 and print relatively day Sunday to Saturday. */
 
 #include <stdio.h>
+#include <conio.h>
 
 void main()
 {
     int day;
-    // clrscr();
+    clrscr();
 
     printf("Enter Day : ");
     scanf("%d", &day);

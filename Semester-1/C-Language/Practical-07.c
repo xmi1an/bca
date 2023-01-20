@@ -8,7 +8,7 @@ void main()
 {
     float km, f, m, cm, i;
 
-    clrscr();
+    // clrscr();
 
     printf("Enter Kilometer : ");
     scanf("%f", &km);

@@ -4,22 +4,26 @@
 #include <conio.h>
 void main()
 {
-    int n, s = 1, x, b = 0;
-    clrscr();
-    printf("Enter Decimal No=");
+    int n;
+    int rem;
+    int a[10];
+    int i = 0;
+    int j;
+
+    printf("Enter Decimal No : ");
     scanf("%d", &n);
+
     while (n != 0)
     {
-        x = n % 8;
-        s = s * 10 + x;
+        rem = n % 8;
+        a[i] = rem;
         n = n / 8;
+        i++;
     }
-    while (s != 0)
+
+    printf("Octal No : ");
+    for (j = i - 1; j >= 0; j--)
     {
-        x = s % 10;
-        b = b * 10 + x;
-        s = s / 10;
+        printf("%d", a[j]);
     }
-    b = b / 10;
-    printf("Octal No=%d\n", b);
 }

@@ -1,5 +1,5 @@
 /*
-38. Write a C program to display following output on the screen.
+38. Write a j program to display following output on the screen.
     1
     12
     123
@@ -10,18 +10,16 @@
 #include <conio.h>
 void main()
 {
-    int n, r, c;
+    int n, i, j;
     // clrscr();
-    printf("Enter No=");
+    printf("Enter Rows : ");
     scanf("%d", &n);
-    for (r = 1; r <= n; r++)
+
+    for (i = 1; i <= n; i++)
     {
-        for (c = 1; c <= n; c++)
+        for (j = 1; j <= i; j++)
         {
-            if (c <= r)
-            {
-                printf("%d", c);
-            }
+            printf("%d", j);
         }
         printf("\n");
     }

@@ -1,38 +1,39 @@
-/* program for count no of words,character,line and spaces from given text.  */
-
+/* 33. program for count no of words,character,line and spaces from given text.  */
 #include <stdio.h>
-#include <conio.h>
 void main()
 {
-    int i, word, chr, line, space;
-    char str[100], ch = 'A';
-    clrscr();
-
-    word = chr = line = space = 0;
-    word = line = 1;
+    // declare variables
+    char str[100];
+    int line = 1, i;
+    int word = 1;
+    int ch = 0;
+    int space = 0;
+    // initialize count variables with zero
 
     printf("Enter String:(Exit Press@:)");
-    for (i = 0; ch != '@'; i++)
+    gets(str);
+
+    for (int i = 0; str[i] != '@'; i++)
     {
-        ch = getchar();
-        str[i] = ch;
+        if (str[i] == '\n')
+        {
+            line++;
+            word++;
+        }
+        else if (str[i] == ' ')
+        {
+            space++;
+            word++;
+        }
+        else if(str[i] >= 'a' || str[i] <= 'z' || str[i] >= 'A' || str[i] <= 'Z' )
+        {
+         ch++;   
+        }
     }
 
-    str[i] = '\0';
-    for (i = 0; str[i] != '@'; i++)
-    {
-        if (str[i] == ' ')
-            space++;
-        if (str[i] == '\n')
-            line++;
-        if (str[i] == ' ' && (str[i - 1] != ' ' && str[i - 1] != '\n'))
-            word++;
-        if (str[i] != ' ' && str[i - 1] != '\n' && str[i] == '\n')
-            word++;
-        chr++;
-    }
-    printf("\n space : %d", space);
-    printf("\n word : %d", word);
-    printf("\n line : %d", line);
-    printf("\n char : %d", chr);
+    printf("Word counts = %d\n", word);
+    printf("\nCharacter counts = %d\n", ch);
+    printf("Line counts = %d\n", line);
+    printf("Total Spaces = %d\n", space);
+
 }

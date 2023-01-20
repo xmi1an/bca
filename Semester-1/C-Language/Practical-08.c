@@ -6,7 +6,7 @@ void main()
 {
     int n1, n2, t;
 
-    clrscr();
+    // clrscr();
 
     printf("\nEnter n1 : ");
     scanf("%d", &n1);

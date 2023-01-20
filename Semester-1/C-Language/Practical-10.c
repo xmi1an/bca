@@ -1,6 +1,5 @@
 /*
-10. Write a C program for summation, subtraction, multiplication, division of two
-number using Arithmetic operator.
+10. Write a C program for summation, subtraction, multiplication, division of two number using Arithmetic operator.
 */
 
 #include <stdio.h>
@@ -10,7 +9,7 @@ void main()
     int n1, n2, add, sub, multiply;
     float d;
 
-    clrscr();
+    // clrscr();
 
     printf("\nEnter n1:");
     scanf("%d", &n1);
