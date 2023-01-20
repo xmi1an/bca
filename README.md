@@ -7,6 +7,5 @@ I wanted to take a moment to express my sincerest gratitude for your hard work a
 
 Thank you for your time, effort, and expertise. Your contributions have made a significant impact on the project, and we couldn't have done it without you.
 
-Sincerely,
-
+Sincerely,<br>
 Milan Jadav
