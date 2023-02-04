@@ -4,6 +4,7 @@ CMakeLists.txt
 cmake-build-debug
 CMakeCache.txt
 CMakeLists.txt
+./github/workflows/add-contributors-to-readme.yml
 *.exe
 
 # Sem 1
