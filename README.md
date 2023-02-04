@@ -21,7 +21,6 @@ Milan Jadav
          <td>Mihir Patel</td>
          <td>BCA Student</td>
       </tr>
-      
       <tr>
          <td>Kartvya Solanki</td>
          <td>BCA Student</td>
