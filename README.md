@@ -14,19 +14,20 @@ Milan Jadav
       <tr>
          <th>Contributor Name</th>
          <th>Role</th>
+         <th>Github Profile</th>
       </tr>
    </thead>
    <tbody>
       <tr>
          <td>Mihir Patel</td>
          <td>BCA Student</td>
+         <td><a href="https://github.com/MIHIRPATEL1234">MIHIRPATEL1234</a></td>
       </tr>
       <tr>
          <td>Kartvya Solanki</td>
          <td>BCA Student</td>
-      </tr>
-     
-     
+         <td><a href="https://github.com/itskartu457">itskartu457</a></td>
+      </tr>     
    </tbody>
 </table>
 
