@@ -1,14 +1,18 @@
-#include<iostream>
-#include<iomanip>
+/* Write a cpp program which explains the use of a manipulators operator. */
+#include <conio.h>
+#include <iostream>
+#include <iomanip>
 using namespace std;
 int main()
 {
-  //1st manipulators is endl
-  int a=10,b=20;
-  cout<<"a="<<a<<endl;
-  cout<<"b="<<b<<endl;
-  //2nd manipulators is setw
-  int a1=30,b1=50;
-  cout<<"a1 = "<<a1<<setw(10)<<"b1 = "<<b1;
+  cout << "Hello" << setw(30) << "World" << endl;
+  getch();
   return 0;
 }
+
+// Explanation:
+/*
+setw() is a manipulator operator which is used to set the width of the output.
+setw() is a member of iomanip header file.
+setw() is used to set the width of the output.
+ */
