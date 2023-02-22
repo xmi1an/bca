@@ -1,0 +1,79 @@
+date/time         : 2023-02-15, 11:23:44, 596ms
+computer name     : ELECTRON
+user name         : milan
+registered owner  : jadavmilan009@gmail.com
+operating system  : Windows NT New x64 build 9200
+system language   : English
+system up time    : 1 day
+program up time   : 3 seconds
+processors        : 8x AMD Ryzen 7 4700U with Radeon Graphics
+physical memory   : 479/7549 MB (free/total)
+free disk space   : (C:) 15.66 GB
+display mode      : 1280x720, 32 bit
+process id        : $2164
+allocated memory  : 20.69 MB
+executable        : sendmail.exe
+exec. date/time   : 2012-04-16 23:00
+compiled with     : Delphi 2006/07
+madExcept version : 3.0l
+callstack crc     : $fecf9b34, $3e229a42, $3e229a42
+exception number  : 1
+exception class   : EIdSMTPReplyError
+exception message : Username and Password not accepted. Learn more at https://support.google.com/mail/?p=BadCredentials v3-20020a170902e8c300b00198fb25d09bsm11221304plg.237 - gsmtp.
+
+main thread ($4494):
+0045918a +003e sendmail.exe IdReplySMTP     501   +1 TIdReplySMTP.RaiseReplyError
+0043ff28 +0008 sendmail.exe IdTCPConnection 576   +0 TIdTCPConnection.RaiseExceptionForLastCmdResult
+004402f4 +003c sendmail.exe IdTCPConnection 751  +10 TIdTCPConnection.CheckResponse
+0043feba +002a sendmail.exe IdTCPConnection 565   +2 TIdTCPConnection.GetResponse
+0043ff87 +005b sendmail.exe IdTCPConnection 585   +4 TIdTCPConnection.SendCmd
+0044020e +0056 sendmail.exe IdTCPConnection 723   +4 TIdTCPConnection.SendCmd
+0045aa16 +0192 sendmail.exe IdSMTP          341  +40 TIdSMTP.Authenticate
+004b5f81 +10cd sendmail.exe sendmail        822 +340 initialization
+764200f7 +0017 KERNEL32.DLL                          BaseThreadInitThunk
+
+thread $3f08:
+764200f7 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $2c80:
+764200f7 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+thread $bd0:
+764200f7 +17 KERNEL32.DLL  BaseThreadInitThunk
+
+stack dump:
+0019fcb4  8f 91 45 00 de fa ed 0e - 01 00 00 00 07 00 00 00  ..E.............
+0019fcc4  c8 fc 19 00 8f 91 45 00 - a0 ca 41 02 e8 1d 43 02  ......E...A...C.
+0019fcd4  00 00 00 00 17 02 00 00 - f8 fc 19 00 e4 fc 19 00  ................
+0019fce4  38 fd 19 00 c8 4b 40 00 - f8 fc 19 00 34 a5 45 00  8....K@.....4.E.
+0019fcf4  00 00 00 00 14 fd 19 00 - 2b ff 43 00 f7 02 44 00  ........+.C...D.
+0019fd04  00 00 00 00 80 fd 19 00 - 80 fd 19 00 20 80 3a 02  ..............:.
+0019fd14  2c fd 19 00 bd fe 43 00 - 00 00 00 00 94 34 46 00  ,.....C......4F.
+0019fd24  00 00 00 00 34 a5 45 00 - 58 fd 19 00 8a ff 43 00  ....4.E.X.....C.
+0019fd34  00 00 00 00 68 fd 19 00 - c8 4b 40 00 58 fd 19 00  ....h....K@.X...
+0019fd44  00 00 00 00 eb 00 00 00 - 34 a5 45 00 80 fd 19 00  ........4.E.....
+0019fd54  00 00 00 00 88 fd 19 00 - 14 02 44 00 00 00 00 00  ..........D.....
+0019fd64  00 00 00 00 94 fd 19 00 - c8 4b 40 00 88 fd 19 00  .........K@.....
+0019fd74  b4 4e 4b 00 b4 4e 4b 00 - 34 a5 45 00 eb 00 19 00  .NK..NK.4.E.....
+0019fd84  00 00 00 00 d0 fd 19 00 - 1b aa 45 00 00 00 00 00  ..........E.....
+0019fd94  a0 fd 19 00 c8 4b 40 00 - d0 fd 19 00 d8 fd 19 00  .....K@.........
+0019fda4  c8 4b 40 00 d0 fd 19 00 - ff 00 00 00 bf 5a 40 00  .K@..........Z@.
+0019fdb4  00 00 00 00 00 00 00 00 - eb 00 4e 01 00 00 00 00  ..........N.....
+0019fdc4  d0 69 40 02 00 00 00 00 - 20 80 3a 02 70 ff 19 00  .i@.......:.p...
+0019fdd4  87 5f 4b 00 e4 fd 19 00 - c8 4b 40 00 70 ff 19 00  ._K......K@.p...
+0019fde4  f0 fd 19 00 c8 4b 40 00 - 70 ff 19 00 fc fd 19 00  .....K@.p.......
+
+disassembling:
+[...]
+00459177       call    -$1f480 ($439cfc)      ; IdReply.TIdReply.GetNumericCode
+0045917c       mov     ecx, eax
+0045917e       mov     dl, 1
+00459180       mov     eax, [$458844]
+00459185       call    +$182 ($45930c)        ; IdReplySMTP.EIdSMTPReplyError.CreateError
+0045918a     > call    -$544a3 ($404cec)      ; System.@RaiseExcept
+0045918f 502   xor     eax, eax
+00459191       pop     edx
+00459192       pop     ecx
+00459193       pop     ecx
+00459194       mov     fs:[eax], edx
+[...]
