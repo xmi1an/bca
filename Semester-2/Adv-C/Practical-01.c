@@ -1,33 +1,42 @@
-/* Write a program to check the given number is Palindrome or not using User Defined Function (UDF). */
 
-#include <stdio.h>
-#include <conio.h>
+#include <stdio.h> // Preprocessor directive
 
-int is_palindrome(int num)
+int main(void) // This defines our main function
 {
-    int reverse = 0, rem, original_num = num;
-    while (num != 0)
-    {
-        rem  = num % 10;
-        reverse = reverse * 10 + rem;
-        num /= 10;
-    }
-    return (reverse == original_num);
+  int num, result;
+  printf("Enter a number: "); // Prompt the user to enter a number
+  scanf("%d", &num); // Get the number
+  
+  result = checkPalindrome(num); // Call the user defined function 
+
+  // Check the result and print the answer
+  if(result == 1) 
+      printf("%d is Palindrome\n", num);
+  else 
+      printf("%d is not Palindrome\n", num);
+  
+  return 0; // Return statement
 }
 
-void main()
+// User defined function to check for Palindrome
+int checkPalindrome(int num)
 {
-    int num;
-    printf("Enter a number: ");
-    scanf("%d", &num);
+    int temp, remainder, reverse = 0;
 
-    if (is_palindrome(num))
-    {
-        printf("The number is a palindrome.\n");
+    // Store the value of num in temp
+    temp = num;
+
+    // Reverse the number using while loop
+    while(temp!=0){
+        remainder = temp % 10;
+        reverse = reverse*10 + remainder;
+        temp = temp / 10;
     }
+
+    // Check if reversed number is equal to original
+    // and return the result
+    if(num == reverse)
+        return 1;
     else
-    {
-        printf("The number is not a palindrome.\n");
-    }
-    getch();
+        return 0;
 }

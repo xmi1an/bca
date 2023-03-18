@@ -1,41 +1,29 @@
-/* Write a program to display first 25 terms of Fibonacci series using recursion. */
 
-#include <stdio.h>
+#include<stdio.h> //import library required to print on screen
 
-int fibonacci(int n)
+//declare a function which will compute fibbonacci series
+int fibonacci(int); 
+
+int main() 
 {
-    if (n == 0)
-    {
-        return 0;
-    }
-    else if (n == 1)
-    {
-        return 1;
-    }
-    else
-    {
-        return fibonacci(n - 1) + fibonacci(n - 2);
-    }
+  int i, num;
+  printf("Enter the number of terms: ");
+  scanf("%d", &num); // read n terms from user
+  
+  //loop through first n terms of Fibonacci sequence
+  for (i = 0; i < num; i++) 
+  {
+     printf("%d  ", fibonacci(i));
+  }
+ 
+  return 0;
 }
 
-int main()
+// a recursive function that returns Fibonacci of n
+int fibonacci(int n) 
 {
-    int i;
-    printf("The first 25 terms of the Fibonacci series are:\n");
-    for (i = 0; i < 25; i++)
-    {
-        printf("%d\t", fibonacci(i));
-    }
-    printf("\n");
-    return 0;
+  if (n <= 1)
+    return n;
+  else
+    return (fibonacci(n-1) + fibonacci(n-2)); // recursive call of the same
 }
-
-/*
-Explanation:
-
-The function fibonacci takes an integer n as input and returns the nth term in the Fibonacci series.
-If n is 0, it returns 0, as the first term in the series is 0.
-If n is 1, it returns 1, as the second term in the series is 1.
-If n is greater than 1, it returns fibonacci(n - 1) + fibonacci(n - 2). The fibonacci function is called recursively with n - 1 and n - 2 until n becomes 0 or 1.
-In the main function, the first 25 terms of the Fibonacci series are calculated using the fibonacci function and displayed.
- */
