@@ -1,4 +1,4 @@
-/* 24. Write a java program which shows the Method Overriding. */
+/* 25. Write a java program which shows the Method Overriding. */
 
 class Base{
     void printMessage()
