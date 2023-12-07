@@ -10,7 +10,8 @@ To display the current date and time, you can use the date function:
 
 ```php <?php
 echo "Today is " . date("Y/m/d") . "<br>";
-echo "The time is " . date("h:i:sa");
+date_default_timezone_set("asia/kolkata");//set timezone 
+echo "The time is " . date("h:i:s");
 ?>
 ```
 
