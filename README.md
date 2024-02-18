@@ -28,6 +28,11 @@ Milan Jadav
          <td>BCA Student</td>
          <td><a href="https://github.com/itskartu457">itskartu457</a></td>
       </tr>     
+      <tr>
+         <td>NAYANSINDHI</td>
+         <td>BCA Student</td>
+         <td><a href="https://github.com/NAYANSINDHI">NAYANSINDHI</a></td>
+      </tr>     
    </tbody>
 </table>
 
