@@ -56,14 +56,37 @@ This will output "The sum of the numbers from 1 to 10 is 55."
 To create a form in PHP, you can use the form element and the input element:
 
 ```php
-<form action="process_form.php" method="post">
+<html lang="en">
+<head>
+    <title>login from</title>
+</head>
+<body>
+    <form action="" method="post">
+        NAME :
+        <input type="text" name="name" id="name">
+        <br>
+        EMAIL :
+        <input type="EMAIL" name="email" id="EMAIL">
+        <br>
+        PASSWORD :
+        <input type="password" name="pass" id="pass">
+        <!-- <input type="submit" value="sub"> -->
+        <button type="submit" name="sub">submit</button>
+    </form>
+    <br>
+    <br>
+</body>
+</html>
 
- Name: <input type="text" name="name"><br>
- Email: <input type="email" name="email"><br>
-
- <input type="submit" value="Submit">
-
-</form>
+<?php
+if ($_POST) 
+{
+    echo "HELLO ". $_POST['name']. "<br>";
+    // echo "YOUER NAME IS ". $_POST['name'] . "<br>";
+    echo "YOUER EMAIL IS " . $_POST['email'] . "<br>";
+    echo "YOUER PASSWORD IS  " . $_POST['pass'] . "<br>";
+}
+?>
 ```
 
 This will create a form with a text input for the name and an email input for the email. When the form is submitted, it will be processed by the process_form.php script.
