@@ -1,17 +1,17 @@
 
 # 📚 BCA Semester 4 – NEP Syllabus Material
 
-Welcome to the **BCA Semester-IV** resource repository! This repository contains **Unit-wise Study Material & Summary** for all subjects as per the **New Education Policy (NEP) - 2020**. Whether you're preparing for exams or just want to explore the concepts deeply, this material is structured to help you in the best way possible.
+😊Welcome to the **BCA Semester-IV** resource repository! This repository contains **Unit-wise Study Material & Summary** for all subjects as per the **New Education Policy (NEP) - 2020**. Whether you're preparing for exams or just want to explore the concepts deeply, this material is structured to help you in the best way possible.
 
 ## 🗂️ Subjects Covered
 
+- 🐍 Python
+- 💻 PHP
+- 📊 SAD
+- 📙 PDRA       
+- 📗 IPDC-II
 - 📘 Computer Security-II  
-- 📗 IPDC-II (Integrated Personality Development Course)  
-- 📙 PDRA (Personality Development & Reasoning Ability)  
-- 💻 PHP  
-- 🐍 Python  
-- 📊 SAD (System Analysis and Design)  
-- 📝 Full BCA SEM-4 Syllabus PDF
+- 📝 BCA SEM-4 Syllabus PDF
 
 ## 💡 Purpose of this Repository
 
@@ -21,13 +21,13 @@ Welcome to the **BCA Semester-IV** resource repository! This repository contains
 - Help you revise faster with **Unit-wise breakdown/Summary**
 - Serve as a go-to resource for **Exams, internals, and viva**
 
-Whether you’re a regular student or self-learner — this repo is made for you. 💪
+Whether you’re a regular student or Self-learner — this repo is made for you.💪
 
 
 ## 📥 Free to Access
 
-You can download all the resources from this repository **Absolutely free**.
-This initiative is created to help BCA students (especially from **HNGU**) get quality, structured content without any cost.
+You can download all the resources from this repository **Absolutely Free**.
+This initiative is created to help BCA students (especially from **HNGU Students**) get quality, structured content without any cost.
 
 ## 🤝 How to Contribute:
 
@@ -40,7 +40,7 @@ If you find any missing content or want to contribute better notes, feel free to
 - Create a pull request
 - Contact me
 
-We welcome **Community Contributions** to improve and expand this repo.
+👉We welcome **Community Contributions** to improve and expand this repo.
 
 👉 Just fork the repo, make your edits, and submit a pull request!  
 Let’s grow this together! 🌱
@@ -56,9 +56,9 @@ Let’s grow this together! 🌱
 All content in this repository is uploaded **Strictly for educational purposes**.  
 You are free to **Use, share, and learn** from it — but please **Do not use it for commercial purposes** without proper permission.
 
-##---------------------------------------------------------------------------------------------
+## Grow with us & Build Skills!🤝🚀
 
 🌟If this helped you, consider starring the repo and spreading the word!  
 Let’s build a helpful student community💙  
-Stay curious, stay coding! 🚀
+Stay curious, Stay coding! 🚀
 Happy Learning 📘✨
