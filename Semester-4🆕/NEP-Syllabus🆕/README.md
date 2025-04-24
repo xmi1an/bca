@@ -56,6 +56,7 @@ Let’s grow this together! 🌱
 All content in this repository is uploaded **Strictly for educational purposes**.  
 You are free to **Use, share, and learn** from it — but please **Do not use it for commercial purposes** without proper permission.
 
+-----------------------------------------------------------------------------------------------
 
 🌟If this helped you, consider starring the repo and spreading the word!  
 Let’s build a helpful student community💙  
