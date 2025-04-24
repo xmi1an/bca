@@ -1,4 +1,5 @@
 ## Download Materials of BCA as per HNGU Syllabus.
+## NEP(2020) Syllabus Updated.
 
 
 Dear contributors,
@@ -18,6 +19,11 @@ Milan Jadav
       </tr>
    </thead>
    <tbody>
+      <tr>
+         <td>Utsav Parmar</td>
+         <td>BCA Student</td>
+         <td><a href="https://github.com/Utsavstack">UP7</a></td>
+      </tr>     
       <tr>
          <td>Mihir Patel</td>
          <td>BCA Student</td>
