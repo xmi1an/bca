@@ -1,7 +1,7 @@
 
 # 📚 BCA Semester 3 – NEP Syllabus Material
 
-😊Welcome to the **BCA Semester-III* resource repository! This repository contains **Unit-wise Study Material & Summary** for all subjects as per the **New Education Policy (NEP) - 2020**. Whether you're preparing for exams or just want to explore the concepts deeply, this material is structured to help you in the best way possible.
+😊Welcome to the **BCA Semester-III** resource repository! This repository contains **Unit-wise Study Material & Summary** for all subjects as per the **New Education Policy (NEP) - 2020**. Whether you're preparing for exams or just want to explore the concepts deeply, this material is structured to help you in the best way possible.
 
 ## 🗂️ Subjects Covered
 
