@@ -24,7 +24,9 @@ from pathlib import Path
 REPO_OWNER = "xmi1an"
 REPO_NAME = "bca"
 BRANCH = "master"
-RAW_BASE = f"https://raw.githubusercontent.com/{REPO_OWNER}/{REPO_NAME}/{BRANCH}/"
+RAW_BASE = (
+    "https://raw.githubusercontent.com/" + REPO_OWNER + "/" + REPO_NAME + "/" + BRANCH + "/"
+)
 
 NEW_EMOJI = "\U0001F195"  # 🆕 — part of several top-level folder names
 
